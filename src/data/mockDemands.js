@@ -1,0 +1,58 @@
+export const mockDemands = [
+  {
+    id: 'dem-001',
+    companyId: 'comp-001',
+    title: 'Reestruturação do modelo financeiro e preparação para captação',
+    description:
+      'Empresa de tecnologia B2B com R$ 8M em receita anual busca consultoria para reestruturar modelo financeiro, preparar projeções e apresentação para investidores em rodada série A.',
+    sector: 'Tecnologia',
+    problemTypes: ['Finanças e controle', 'Estratégia e crescimento'],
+    budget: 'R$ 80.000 – R$ 120.000',
+    timeline: '3 meses',
+    status: 'em_diagnostico',
+    createdAt: '2025-04-10T09:00:00Z',
+    updatedAt: '2025-04-15T14:30:00Z',
+  },
+  {
+    id: 'dem-002',
+    companyId: 'comp-002',
+    title: 'Otimização de processos operacionais e redução de custos',
+    description:
+      'Indústria de alimentos com 3 plantas e 1.200 funcionários precisa de diagnóstico operacional e programa de eficiência que gere redução mínima de 15% nos custos de produção.',
+    sector: 'Indústria',
+    problemTypes: ['Operações e processos'],
+    budget: 'R$ 150.000 – R$ 250.000',
+    timeline: '6 meses',
+    status: 'em_roteamento',
+    createdAt: '2025-03-22T11:15:00Z',
+    updatedAt: '2025-04-18T10:00:00Z',
+  },
+  {
+    id: 'dem-003',
+    companyId: 'comp-003',
+    title: 'Transformação digital da área de vendas e CRM',
+    description:
+      'Distribuidora com força de vendas de 80 representantes busca estruturar CRM, automatizar funil e treinar equipe para uso de dados na tomada de decisão.',
+    sector: 'Varejo',
+    problemTypes: ['Marketing e vendas', 'Tecnologia e sistemas'],
+    budget: 'R$ 60.000 – R$ 100.000',
+    timeline: '4 meses',
+    status: 'qualificada',
+    createdAt: '2025-04-20T08:45:00Z',
+    updatedAt: '2025-04-20T08:45:00Z',
+  },
+  {
+    id: 'dem-004',
+    companyId: 'comp-004',
+    title: 'Estruturação da área de RH e gestão de cultura organizacional',
+    description:
+      'Startup de saúde digital que cresceu de 20 para 150 pessoas em 2 anos precisa estruturar área de RH, políticas e programa de desenvolvimento de lideranças.',
+    sector: 'Saúde',
+    problemTypes: ['Pessoas e cultura'],
+    budget: 'R$ 80.000 – R$ 130.000',
+    timeline: '5 meses',
+    status: 'em_execucao',
+    createdAt: '2025-02-14T13:00:00Z',
+    updatedAt: '2025-04-01T09:20:00Z',
+  },
+]
