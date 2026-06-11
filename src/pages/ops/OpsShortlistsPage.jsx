@@ -37,7 +37,7 @@ export default function OpsShortlistsPage() {
               <th>Empresa</th>
               <th>Demanda vinculada</th>
               <th>Status</th>
-              <th>Provedores</th>
+              <th>Especialistas</th>
               <th>Data</th>
               <th></th>
             </tr>

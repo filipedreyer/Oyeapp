@@ -123,7 +123,7 @@ export default function OpsClosurePage() {
           <div className="section-card__body">
             {[
               { field: 'satisfacaoCliente', label: 'Satisfação do cliente' },
-              { field: 'satisfacaoProvedor', label: 'Satisfação do provedor' },
+              { field: 'satisfacaoProvedor', label: 'Satisfação do especialista' },
             ].map(({ field, label }) => (
               <div key={field} style={{ marginBottom: 'var(--space-4)' }}>
                 <label style={{ display: 'block', fontSize: 'var(--text-xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--muted)', marginBottom: 'var(--space-2)' }}>

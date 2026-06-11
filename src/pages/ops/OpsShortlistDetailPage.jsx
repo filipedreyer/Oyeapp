@@ -86,7 +86,7 @@ export default function OpsShortlistDetailPage() {
 
       <div className="section-card">
         <div className="section-card__header">
-          <h3 className="section-card__title">Provedores na shortlist</h3>
+          <h3 className="section-card__title">Especialistas na lista</h3>
         </div>
         <table className="ws-table">
           <thead>

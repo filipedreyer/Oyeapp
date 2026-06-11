@@ -73,7 +73,7 @@ export default function OpsProviderDetailPage() {
     <div className="workspace-content">
       <div className="ws-page-header">
         <p className="eyebrow">
-          <Link to="/ops/provedores" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Provedores</Link>
+          <Link to="/ops/provedores" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Especialistas</Link>
           {' / '}Detalhe
         </p>
         <h1 style={{ marginBottom: 'var(--space-2)' }}>{provider.name}</h1>
@@ -219,7 +219,7 @@ export default function OpsProviderDetailPage() {
             <div className="section-card__body">
               <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
                 <button className="btn btn-secondary" disabled style={{ opacity: 0.5 }}>
-                  Adicionar à shortlist (em breve)
+                  Adicionar à lista (em breve)
                 </button>
                 <button
                   className="btn btn-secondary"

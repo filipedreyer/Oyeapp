@@ -217,7 +217,7 @@ export default function OpsRoutingPage() {
                   className="btn btn-secondary"
                   style={{ textAlign: 'center' }}
                 >
-                  Ir para shortlists
+                  Ir para listas
                 </Link>
               </div>
             </div>

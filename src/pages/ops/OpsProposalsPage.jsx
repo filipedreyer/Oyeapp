@@ -38,7 +38,7 @@ export default function OpsProposalsPage() {
             <tr>
               <th>ID</th>
               <th>Empresa</th>
-              <th>Provedor</th>
+              <th>Especialista</th>
               <th>Valor estimado</th>
               <th>Status</th>
               <th>Data</th>

@@ -4,7 +4,7 @@ export default function TermsPage() {
     'Uso da Plataforma',
     'Cadastro e Conta',
     'Diagnóstico e Dados',
-    'Provedores e Matchmaking',
+    'Especialistas e Indicação',
     'Propriedade Intelectual',
     'Limitação de Responsabilidade',
     'Rescisão',

@@ -78,7 +78,7 @@ export default function OpsProjectDetailPage() {
                   <p style={{ fontSize: 'var(--text-sm)' }}>{project.clientId}</p>
                 </div>
                 <div>
-                  <p className="eyebrow" style={{ marginBottom: 'var(--space-1)' }}>Provedor</p>
+                  <p className="eyebrow" style={{ marginBottom: 'var(--space-1)' }}>Especialista</p>
                   <p style={{ fontSize: 'var(--text-sm)' }}>{project.providerId}</p>
                 </div>
                 <div>

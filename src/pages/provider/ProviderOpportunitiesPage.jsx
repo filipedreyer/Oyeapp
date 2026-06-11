@@ -53,7 +53,7 @@ export default function ProviderOpportunitiesPage() {
   return (
     <div className="workspace-content">
       <div className="ws-page-header">
-        <p className="eyebrow">Provedor</p>
+        <p className="eyebrow">Especialista</p>
         <h1>Oportunidades</h1>
         <p>Demandas disponíveis que se encaixam no seu perfil.</p>
       </div>
