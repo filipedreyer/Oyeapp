@@ -25,7 +25,7 @@ const VALUES = [
   { num: '01', t: 'Método & Rigor Técnico', d: 'Frameworks proprietários e curadoria especializada. Engenharia antes de opinião.' },
   { num: '02', t: 'Diagnóstico Preciso', d: 'Acerto no diagnóstico como base de qualquer solução com ROI real.' },
   { num: '03', t: 'Inteligência Coletiva', d: 'Dados que circulam e conhecimento que se acumula em cada caso.' },
-  { num: '04', t: 'Curadoria Especializada', d: 'Cada provedor passa por homologação rigorosa. Não somos um diretório aberto.' },
+  { num: '04', t: 'Curadoria Especializada', d: 'Cada especialista passa por avaliação rigorosa. Não somos um diretório aberto.' },
   { num: '05', t: 'Relações que Importam', d: 'Acreditamos que relações construídas com respeito criam colaboração genuína.' },
   { num: '06', t: 'Execução com Precisão', d: 'Entrega com rigor de operação industrial, não de consultoria genérica.' },
 ]
