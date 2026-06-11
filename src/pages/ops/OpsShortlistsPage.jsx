@@ -48,7 +48,7 @@ export default function OpsShortlistsPage() {
                 <td style={{ color: 'var(--muted)', fontSize: 'var(--text-xs)', fontFamily: 'monospace' }}>{sl.id}</td>
                 <td style={{ fontWeight: 600, color: 'var(--ink)' }}>{sl.demandaEmpresa}</td>
                 <td>
-                  <Link to={`/ops/demandas/${sl.demandaId}`} style={{ color: 'var(--copper)', fontSize: 'var(--text-xs)' }}>
+                  <Link to={`/ops/demandas/${sl.demandaId}`} style={{ color: 'var(--navy-mid)', fontSize: 'var(--text-xs)' }}>
                     {sl.demandaId}
                   </Link>
                 </td>

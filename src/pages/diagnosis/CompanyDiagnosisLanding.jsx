@@ -59,7 +59,7 @@ export default function CompanyDiagnosisLanding() {
                     backgroundColor: i % 2 === 0 ? 'var(--white)' : 'var(--paper)',
                     borderBottom: '1px solid var(--line)',
                   }}>
-                    <span style={{ fontSize: '0.6875rem', fontWeight: 800, letterSpacing: '0.10em', color: 'var(--copper)' }}>{s.n}</span>
+                    <span style={{ fontSize: '0.6875rem', fontWeight: 800, letterSpacing: '0.10em', color: 'var(--navy-mid)' }}>{s.n}</span>
                     <div>
                       <div style={{ fontSize: '0.9375rem', fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--ink)', marginBottom: '2px' }}>{s.name}</div>
                       <div style={{ fontSize: '0.8125rem', color: 'var(--muted)', letterSpacing: '-0.01em' }}>{s.desc}</div>
@@ -93,7 +93,7 @@ export default function CompanyDiagnosisLanding() {
               </div>
 
               <div style={{ padding: '28px', backgroundColor: 'var(--navy-strong)', color: 'var(--white)' }}>
-                <span style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--copper)', display: 'block', marginBottom: '12px' }}>
+                <span style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--navy-mid)', display: 'block', marginBottom: '12px' }}>
                   Tempo estimado
                 </span>
                 <div style={{ fontSize: 'clamp(2.4rem, 5vw, 3.8rem)', fontWeight: 900, letterSpacing: '-0.08em', lineHeight: 1, color: 'var(--white)', marginBottom: '8px' }}>

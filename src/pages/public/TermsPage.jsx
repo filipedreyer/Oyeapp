@@ -148,7 +148,7 @@ export default function TermsPage() {
           </p>
           <p>
             Para dúvidas sobre estes Termos, entre em contato pelo{' '}
-            <a href="/contato" style={{ color: 'var(--copper)', fontWeight: 700 }}>formulário de contato</a>.
+            <a href="/contato" style={{ color: 'var(--navy-mid)', fontWeight: 700 }}>formulário de contato</a>.
           </p>
         </div>
       </div>

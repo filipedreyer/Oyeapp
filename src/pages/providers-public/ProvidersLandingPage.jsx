@@ -89,7 +89,7 @@ export default function ProvidersLandingPage() {
                 alignItems: 'center',
                 gap: '14px',
               }}>
-                <span style={{ width: '6px', height: '6px', backgroundColor: 'var(--copper)', flexShrink: 0, borderRadius: '50%' }} />
+                <span style={{ width: '6px', height: '6px', backgroundColor: 'var(--navy-mid)', flexShrink: 0, borderRadius: '50%' }} />
                 <span style={{ fontSize: '0.9375rem', fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--ink)' }}>{item}</span>
               </div>
             ))}

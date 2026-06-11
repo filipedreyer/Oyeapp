@@ -7,11 +7,11 @@ const STATUS_BADGE = {
   enviada: 'badge badge-attention',
   aguardando_complemento: 'badge badge-attention',
   qualificada: 'badge badge-positive',
-  em_diagnostico: 'badge badge-copper',
+  em_diagnostico: 'badge badge-navy',
   diagnosticada: 'badge badge-positive',
-  em_roteamento: 'badge badge-copper',
-  em_selecao: 'badge badge-copper',
-  em_contratacao: 'badge badge-copper',
+  em_roteamento: 'badge badge-navy',
+  em_selecao: 'badge badge-navy',
+  em_contratacao: 'badge badge-navy',
   em_execucao: 'badge badge-positive',
   encerrada: 'badge',
   cancelada: 'badge',
@@ -84,7 +84,7 @@ export default function ClientDashboardPage() {
         <div>
           <div style={{ marginBottom: 'var(--space-6)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <h2 style={{ fontSize: 'var(--text-lg)', fontWeight: 700 }}>Suas demandas</h2>
-            <Link to="/cliente/demandas" style={{ fontSize: 'var(--text-sm)', color: 'var(--copper)' }}>
+            <Link to="/cliente/demandas" style={{ fontSize: 'var(--text-sm)', color: 'var(--navy-mid)' }}>
               Ver todas →
             </Link>
           </div>

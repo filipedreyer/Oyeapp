@@ -48,7 +48,7 @@ export default function OpsDiagnosticsPage() {
               <tr key={d.id}>
                 <td style={{ fontWeight: 600, color: 'var(--ink)' }}>{d.demandaEmpresa}</td>
                 <td>
-                  <Link to={`/ops/demandas/${d.demandaId}`} style={{ color: 'var(--copper)', fontSize: 'var(--text-xs)' }}>
+                  <Link to={`/ops/demandas/${d.demandaId}`} style={{ color: 'var(--navy-mid)', fontSize: 'var(--text-xs)' }}>
                     {d.demandaId}
                   </Link>
                 </td>

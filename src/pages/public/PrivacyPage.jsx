@@ -115,7 +115,7 @@ export default function PrivacyPage() {
           </ul>
           <p>
             Para exercer seus direitos, entre em contato pelo{' '}
-            <a href="/contato" style={{ color: 'var(--copper)', fontWeight: 700 }}>formulário de contato</a>.
+            <a href="/contato" style={{ color: 'var(--navy-mid)', fontWeight: 700 }}>formulário de contato</a>.
           </p>
         </div>
 
@@ -148,7 +148,7 @@ export default function PrivacyPage() {
           <p>
             O Encarregado de Proteção de Dados (DPO) da Oyê pode ser contactado pelo
             formulário de contato. Para demais dúvidas sobre privacidade, utilize o{' '}
-            <a href="/contato" style={{ color: 'var(--copper)', fontWeight: 700 }}>formulário de contato</a>.
+            <a href="/contato" style={{ color: 'var(--navy-mid)', fontWeight: 700 }}>formulário de contato</a>.
           </p>
         </div>
       </div>

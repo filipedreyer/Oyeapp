@@ -113,19 +113,19 @@ export default function ProviderHomologationPage() {
         <div className="section-card__body">
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
             <div style={{ display: 'flex', gap: 'var(--space-3)' }}>
-              <div style={{ fontSize: 'var(--text-base)', color: 'var(--copper)' }}>→</div>
+              <div style={{ fontSize: 'var(--text-base)', color: 'var(--navy-mid)' }}>→</div>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--ink-soft)' }}>
                 <strong>Prazo de análise:</strong> A equipe Oyê analisará seu perfil em até 5 dias úteis após a candidatura.
               </p>
             </div>
             <div style={{ display: 'flex', gap: 'var(--space-3)' }}>
-              <div style={{ fontSize: 'var(--text-base)', color: 'var(--copper)' }}>→</div>
+              <div style={{ fontSize: 'var(--text-base)', color: 'var(--navy-mid)' }}>→</div>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--ink-soft)' }}>
                 <strong>Entrevista:</strong> Caso avance, você será convidado para uma conversa com um dos gestores da Oyê.
               </p>
             </div>
             <div style={{ display: 'flex', gap: 'var(--space-3)' }}>
-              <div style={{ fontSize: 'var(--text-base)', color: 'var(--copper)' }}>→</div>
+              <div style={{ fontSize: 'var(--text-base)', color: 'var(--navy-mid)' }}>→</div>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--ink-soft)' }}>
                 <strong>Resultado:</strong> Você receberá uma comunicação por e-mail com o resultado da homologação.
               </p>

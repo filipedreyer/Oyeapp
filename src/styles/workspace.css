@@ -179,7 +179,7 @@
 }
 
 .workspace-sidebar--dark .workspace-sidebar__logout:hover {
-  color: var(--copper-soft);
+  color: var(--blue-light);
 }
 
 /* Main area */
@@ -417,7 +417,7 @@
 .ops-col-item__action {
   font-size: var(--text-xs);
   font-weight: 700;
-  color: var(--copper);
+  color: var(--navy-mid);
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
@@ -677,7 +677,7 @@
 .intel-card__freq {
   font-size: var(--text-xs);
   font-weight: 700;
-  color: var(--copper);
+  color: var(--navy-mid);
   white-space: nowrap;
 }
 
@@ -775,11 +775,11 @@
 }
 
 .star-btn--active {
-  color: var(--copper);
+  color: var(--navy-mid);
 }
 
 .star-btn:hover {
-  color: var(--copper);
+  color: var(--navy-mid);
 }
 
 /* Filters bar */

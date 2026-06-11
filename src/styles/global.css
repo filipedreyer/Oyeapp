@@ -220,10 +220,10 @@ p { line-height: var(--lh-body); }
   line-height: 1;
 }
 
-.badge-positive  { background-color: rgba(49,79,71,0.12); color: var(--positive); }
+.badge-positive  { background-color: rgba(47,111,94,0.12); color: var(--positive); }
 .badge-attention { background-color: rgba(143,93,56,0.12); color: var(--attention); }
-.badge-copper    { background-color: var(--copper-soft); color: var(--copper); }
-.badge-navy      { background-color: rgba(11,26,43,0.10); color: var(--navy); }
+.badge-copper    { background-color: var(--blue-light); color: var(--navy-mid); }
+.badge-navy      { background-color: var(--blue-light); color: var(--navy); }
 
 /* ── Cards ── */
 .card {

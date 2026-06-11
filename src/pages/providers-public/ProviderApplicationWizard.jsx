@@ -764,7 +764,7 @@ export default function ProviderApplicationWizard() {
       // continue
     }
 
-    navigate(`/provedores/candidatura/${candidaturaId}`)
+    navigate(`/para-consultores/candidatura/${candidaturaId}`)
   }
 
   const stepContent = () => {
@@ -784,7 +784,7 @@ export default function ProviderApplicationWizard() {
   return (
     <div className="wizard-container">
       <div style={{ marginBottom: 'var(--space-4)' }}>
-        <Link to="/provedores/candidatura" style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)' }}>
+        <Link to="/para-consultores/candidatura" style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)' }}>
           ← Sobre o processo
         </Link>
       </div>

@@ -89,7 +89,7 @@ export default function ProviderApplicationIntroPage() {
               </ul>
 
               <div style={{ marginTop: '36px', padding: '28px', backgroundColor: 'var(--navy-strong)', color: 'var(--white)' }}>
-                <span style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--copper)', display: 'block', marginBottom: '12px' }}>
+                <span style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--navy-mid)', display: 'block', marginBottom: '12px' }}>
                   Tempo estimado
                 </span>
                 <div style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 900, letterSpacing: '-0.08em', lineHeight: 1, color: 'var(--white)', marginBottom: '8px' }}>

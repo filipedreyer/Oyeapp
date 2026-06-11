@@ -50,7 +50,7 @@ export default function ProviderApplicationStatus() {
         </p>
         <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-8)' }}>
           <Link to="/provedores/candidatura/novo" className="btn btn-primary">Iniciar candidatura</Link>
-          <Link to="/provedores" className="btn btn-ghost">Voltar</Link>
+          <Link to="/para-consultores" className="btn btn-ghost">Voltar</Link>
         </div>
       </div>
     )
@@ -149,7 +149,7 @@ export default function ProviderApplicationStatus() {
         </div>
 
         <div style={{ marginTop: 'var(--space-10)', display: 'flex', gap: 'var(--space-4)', justifyContent: 'center' }}>
-          <Link to="/provedores" className="btn btn-ghost">Voltar para provedores</Link>
+          <Link to="/para-consultores" className="btn btn-ghost">Voltar para provedores</Link>
           <Link to="/" className="btn btn-ghost">Ir para o início</Link>
         </div>
 

@@ -20,7 +20,7 @@ export default function ConsultantFitPage() {
           Não encontramos um perfil com o identificador <strong>{consultorSlug}</strong>.
         </p>
         <div style={{ marginTop: '32px' }}>
-          <Link to="/consultores" className="btn btn-secondary">← Voltar ao diretório</Link>
+          <Link to="/rede-de-especialistas" className="btn btn-secondary">← Rede de especialistas</Link>
         </div>
       </div>
     )
@@ -89,7 +89,7 @@ export default function ConsultantFitPage() {
         </div>
 
         <div className="fit-path" style={{ backgroundColor: 'var(--navy-strong)', color: 'var(--white)' }}>
-          <span style={{ fontSize: '0.6875rem', fontWeight: 800, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--copper)', display: 'block', marginBottom: '16px' }}>
+          <span style={{ fontSize: '0.6875rem', fontWeight: 800, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--navy-mid)', display: 'block', marginBottom: '16px' }}>
             Opção 2
           </span>
           <div style={{ fontSize: '1rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--white)', marginBottom: '12px' }}>

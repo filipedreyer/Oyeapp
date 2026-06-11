@@ -78,7 +78,7 @@ export default function OpsShortlistDetailPage() {
         <h1 style={{ marginBottom: 'var(--space-2)' }}>Shortlist — {sl.demandaEmpresa}</h1>
         <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
           <span className={STATUS_BADGE[sl.status] || 'badge'}>{STATUS_LABELS[sl.status] || sl.status}</span>
-          <Link to={`/ops/demandas/${sl.demandaId}`} style={{ fontSize: 'var(--text-xs)', color: 'var(--copper)' }}>
+          <Link to={`/ops/demandas/${sl.demandaId}`} style={{ fontSize: 'var(--text-xs)', color: 'var(--navy-mid)' }}>
             Ver demanda →
           </Link>
         </div>
@@ -110,7 +110,7 @@ export default function OpsShortlistDetailPage() {
                 <td>
                   <Link
                     to={`/ops/provedores/${p.id}`}
-                    style={{ fontSize: 'var(--text-xs)', color: 'var(--copper)' }}
+                    style={{ fontSize: 'var(--text-xs)', color: 'var(--navy-mid)' }}
                   >
                     Ver →
                   </Link>

@@ -78,7 +78,7 @@ export default function ProviderDashboardPage() {
             background: 'var(--paper-2)',
             border: 'var(--border)',
             borderRadius: '2px',
-            borderLeft: '4px solid var(--copper)',
+            borderLeft: '4px solid var(--navy-mid)',
             padding: 'var(--space-5)',
             marginBottom: 'var(--space-6)',
           }}

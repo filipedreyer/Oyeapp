@@ -112,7 +112,7 @@ export default function AboutPage() {
       {/* Manifesto */}
       <div className="manifesto-section">
         <div className="container">
-          <span className="pub-eyebrow" style={{ color: 'var(--copper)', marginBottom: '36px' }}>Manifesto</span>
+          <span className="pub-eyebrow" style={{ color: 'var(--navy-mid)', marginBottom: '36px' }}>Manifesto</span>
           <p><strong>Acreditamos que toda empresa merece saber qual é o problema real</strong> antes de contratar qualquer solução.</p>
           <p>Acreditamos que diagnóstico errado não é neutro — é investimento negativo.</p>
           <p>Acreditamos que o conhecimento acumulado em cada caso tem valor além do projeto em si.</p>
