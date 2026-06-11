@@ -514,7 +514,7 @@
 
 .review-section-edit {
   font-size: var(--text-xs);
-  color: var(--copper);
+  color: var(--navy-mid);
   font-weight: 600;
   letter-spacing: normal;
   text-transform: none;
@@ -1031,7 +1031,7 @@
   border: var(--border);
 }
 
-.status-badge.enviada { background: var(--copper-soft); color: var(--copper); }
+.status-badge.enviada { background: var(--blue-light); color: var(--navy-mid); }
 .status-badge.em_diagnostico { background: #dde8f0; color: var(--navy); }
 .status-badge.qualificada { background: #d8ece4; color: var(--positive); }
 

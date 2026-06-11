@@ -763,8 +763,8 @@
 .directory-notice {
   margin-top: 32px;
   padding: 20px 28px;
-  background-color: var(--copper-soft);
-  border-left: 3px solid var(--copper);
+  background-color: var(--blue-light);
+  border-left: 3px solid var(--navy-mid);
   font-size: 0.875rem;
   color: var(--attention);
   line-height: 1.55;
@@ -956,7 +956,7 @@
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--copper);
+  color: var(--navy-mid);
   display: block;
   margin-bottom: 16px;
 }
@@ -1066,7 +1066,7 @@
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--copper);
+  color: var(--navy-mid);
   margin-bottom: 16px;
 }
 
@@ -1118,7 +1118,7 @@
   font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: var(--copper);
+  color: var(--navy-mid);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -1245,7 +1245,7 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--copper);
+  color: var(--navy-mid);
   margin-bottom: 14px;
 }
 
@@ -1274,7 +1274,7 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--copper);
+  color: var(--navy-mid);
   margin-bottom: 14px;
 }
 
@@ -1323,7 +1323,7 @@
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--copper);
+  color: var(--navy-mid);
   margin-bottom: 10px;
 }
 
