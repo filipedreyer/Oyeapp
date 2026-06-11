@@ -87,13 +87,13 @@ export default function ProviderOpportunitiesPage() {
           </div>
           <p className="eyebrow" style={{ marginBottom: 'var(--space-3)' }}>Acesso bloqueado</p>
           <h2 style={{ fontSize: 'var(--text-xl)', marginBottom: 'var(--space-4)' }}>
-            Oportunidades disponíveis após homologação
+            Oportunidades disponíveis após avaliação
           </h2>
           <p style={{ color: 'var(--muted)', fontSize: 'var(--text-sm)', maxWidth: '420px', margin: '0 auto var(--space-6)', lineHeight: '1.7' }}>
-            Após a conclusão do processo de homologação, você terá acesso às oportunidades que se encaixam no seu perfil de especialidade.
+            Após a conclusão do processo de avaliação, você terá acesso às oportunidades que se encaixam no seu perfil de especialidade.
           </p>
           <Link to="/provedor/homologacao" className="btn btn-primary">
-            Ver status da homologação
+            Ver status da avaliação
           </Link>
         </div>
       ) : (

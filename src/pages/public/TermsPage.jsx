@@ -91,10 +91,10 @@ export default function TermsPage() {
         </div>
 
         <div className="legal-section" id="section-5">
-          <h2>5. Provedores e Matchmaking</h2>
+          <h2>5. Especialistas e Indicação</h2>
           <p>
-            Os provedores listados na plataforma passam por processo de homologação, mas a
-            Oyê não é parte nos contratos firmados entre empresas e provedores. A relação
+            Os especialistas listados na plataforma passam por processo de avaliação, mas a
+            Oyê não é parte nos contratos firmados entre empresas e especialistas. A relação
             contratual é estabelecida diretamente entre as partes, sendo a Oyê responsável
             apenas pelo processo de diagnóstico e recomendação.
           </p>

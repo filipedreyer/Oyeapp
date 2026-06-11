@@ -116,7 +116,7 @@ export default function ProvidersLandingPage() {
       <section className="pub-section pub-section--paper2">
         <div className="container">
           <span className="pub-eyebrow">Como funciona</span>
-          <h2 className="pub-headline">Processo de<br />homologação</h2>
+          <h2 className="pub-headline">Processo de<br />avaliação</h2>
           <div className="process-steps">
             {PROCESS.map(step => (
               <div key={step.num} className="process-step">

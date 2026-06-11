@@ -17,7 +17,7 @@ const NEXT_STEPS = [
     active: false,
   },
   {
-    label: 'Homologação',
+    label: 'Avaliação',
     sub: 'Aprovação e acesso à rede de demandas',
     active: false,
   },

@@ -5,7 +5,7 @@ const STEPS = [
   { id: 1, label: 'Candidatura enviada', desc: 'Formulário de candidatura recebido pela equipe Oyê.' },
   { id: 2, label: 'Em análise', desc: 'A equipe Oyê está revisando seu perfil, experiências e cases.' },
   { id: 3, label: 'Entrevista', desc: 'Uma conversa com a equipe Oyê para aprofundar o conhecimento mútuo.' },
-  { id: 4, label: 'Decisão', desc: 'Comunicação do resultado da homologação.' },
+  { id: 4, label: 'Decisão', desc: 'Comunicação do resultado da avaliação.' },
 ]
 
 export default function ProviderHomologationPage() {
@@ -21,9 +21,9 @@ export default function ProviderHomologationPage() {
   return (
     <div className="workspace-content">
       <div className="ws-page-header">
-        <p className="eyebrow">Provedor</p>
-        <h1>Minha Homologação</h1>
-        <p>Acompanhe o status do seu processo de homologação na plataforma Oyê.</p>
+        <p className="eyebrow">Especialista</p>
+        <h1>Minha Avaliação</h1>
+        <p>Acompanhe o status do seu processo de avaliação na plataforma Oyê.</p>
       </div>
 
       {/* Status overview */}
@@ -33,7 +33,7 @@ export default function ProviderHomologationPage() {
         </div>
         <div className="section-card__body">
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', marginBottom: 'var(--space-5)' }}>
-            <span className="badge badge-attention">Em homologação</span>
+            <span className="badge badge-attention">Em avaliação</span>
             <span style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)' }}>
               Etapa {currentStep} de {STEPS.length}
             </span>
@@ -127,7 +127,7 @@ export default function ProviderHomologationPage() {
             <div style={{ display: 'flex', gap: 'var(--space-3)' }}>
               <div style={{ fontSize: 'var(--text-base)', color: 'var(--navy-mid)' }}>→</div>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--ink-soft)' }}>
-                <strong>Resultado:</strong> Você receberá uma comunicação por e-mail com o resultado da homologação.
+                <strong>Resultado:</strong> Você receberá uma comunicação por e-mail com o resultado da avaliação.
               </p>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function ProviderHomologationPage() {
         </div>
         <div className="section-card__body">
           <p style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)', marginBottom: 'var(--space-3)' }}>
-            Se tiver dúvidas sobre o processo de homologação, entre em contato com a equipe Oyê.
+            Se tiver dúvidas sobre o processo de avaliação, entre em contato com a equipe Oyê.
           </p>
           <a href="mailto:provedores@oye.com.br" className="btn btn-secondary" style={{ fontSize: 'var(--text-sm)' }}>
             provedores@oye.com.br

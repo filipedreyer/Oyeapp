@@ -151,7 +151,7 @@ export default function OpsProviderDetailPage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
           <div className="section-card">
             <div className="section-card__header">
-              <h3 className="section-card__title">Status de Homologação</h3>
+              <h3 className="section-card__title">Status de Avaliação</h3>
             </div>
             <div className="section-card__body">
               <div style={{ marginBottom: 'var(--space-3)' }}>

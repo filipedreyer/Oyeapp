@@ -116,7 +116,7 @@ export default function ProviderDashboardPage() {
         <div className="section-card__body">
           <div className="ops-quick-actions">
             <Link to="/provedor/homologacao" className="btn btn-secondary">
-              Minha homologação
+              Minha avaliação
             </Link>
             <Link to="/provedor/oportunidades" className={`btn ${isHomologated ? 'btn-primary' : 'btn-secondary'}`}>
               {isHomologated ? 'Ver oportunidades' : 'Oportunidades (bloqueado)'}

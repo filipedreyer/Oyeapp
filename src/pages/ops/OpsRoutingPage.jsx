@@ -10,7 +10,7 @@ const MOCK_DIAGNOSTICS = {
 }
 
 const ROUTE_OPTIONS = [
-  { value: 'marketplace', label: 'Marketplace Curado', desc: 'Conexão com provedor homologado da base Oyê para atender a demanda.' },
+  { value: 'marketplace', label: 'Marketplace Curado', desc: 'Conexão com especialista avaliado da base Oyê para atender a demanda.' },
   { value: 'produto_oye', label: 'Produto Oyê', desc: 'Solução padronizada desenvolvida internamente pela Oyê para este tipo de demanda.' },
   { value: 'inovacao_aberta', label: 'Inovação Aberta', desc: 'Desafio aberto para solução colaborativa com parceiros externos.' },
   { value: 'comunidade', label: 'Comunidade Oyê', desc: 'Mobilização da rede e comunidade Oyê para encontrar solução.' },

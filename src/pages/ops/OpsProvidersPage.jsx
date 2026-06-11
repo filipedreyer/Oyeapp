@@ -59,8 +59,8 @@ export default function OpsProvidersPage() {
     <div className="workspace-content">
       <div className="ws-page-header">
         <p className="eyebrow">Ops</p>
-        <h1>Base de Provedores</h1>
-        <p>Gerencie os provedores homologados e em análise na plataforma.</p>
+        <h1>Base de Especialistas</h1>
+        <p>Gerencie os especialistas avaliados e em análise na plataforma.</p>
       </div>
 
       {/* Summary stats */}
@@ -71,7 +71,7 @@ export default function OpsProvidersPage() {
         </div>
         <div className="ops-metric-card">
           <div className="ops-metric-card__value">{approved}</div>
-          <div className="ops-metric-card__label">Homologados</div>
+          <div className="ops-metric-card__label">Avaliados</div>
         </div>
         <div className="ops-metric-card">
           <div className="ops-metric-card__value">{inAnalysis}</div>
@@ -93,7 +93,7 @@ export default function OpsProvidersPage() {
           style={{ minWidth: '200px' }}
         />
         <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}>
-          <option value="">Homologação: Todos</option>
+          <option value="">Avaliação: Todos</option>
           {Object.entries(HOMOLOGATION_LABELS).map(([v, l]) => (
             <option key={v} value={v}>{l}</option>
           ))}
@@ -123,7 +123,7 @@ export default function OpsProvidersPage() {
               <th>Tipo</th>
               <th>Setores</th>
               <th>Disponibilidade</th>
-              <th>Homologação</th>
+              <th>Avaliação</th>
               <th>Região</th>
               <th></th>
             </tr>

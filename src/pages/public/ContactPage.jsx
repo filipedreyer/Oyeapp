@@ -84,10 +84,10 @@ export default function ContactPage() {
         </div>
 
         <div className="contact-info-card">
-          <div className="contact-info-card__title">É consultor ou provedor?</div>
+          <div className="contact-info-card__title">É consultor ou especialista?</div>
           <p className="contact-info-card__text">
             Se você tem solução e quer fazer parte da rede Oyê, a candidatura é o caminho certo.
-            Não respondemos a abordagens comerciais fora do processo de homologação.
+            Não respondemos a abordagens comerciais fora do processo de avaliação.
           </p>
           <Link to="/provedores/candidatura" className="btn btn-secondary">
             Candidatura de provedor

@@ -83,7 +83,7 @@ export default function ProviderApplicationIntroPage() {
             </div>
 
             <div>
-              <span className="pub-eyebrow">Critérios de homologação</span>
+              <span className="pub-eyebrow">Critérios de avaliação</span>
               <ul className="profile-list" style={{ marginTop: '32px' }}>
                 {CRITERIA.map(c => <li key={c}>{c}</li>)}
               </ul>
@@ -101,7 +101,7 @@ export default function ProviderApplicationIntroPage() {
               </div>
 
               <div style={{ marginTop: '16px', padding: '24px 28px', border: '1px solid var(--line)', backgroundColor: 'var(--white)', fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.6 }}>
-                <strong style={{ color: 'var(--ink)' }}>Próximos passos após o envio:</strong> Análise em até 5 dias úteis, seguida de entrevista. A homologação não é automática — cada candidatura é avaliada individualmente.
+                <strong style={{ color: 'var(--ink)' }}>Próximos passos após o envio:</strong> Análise em até 5 dias úteis, seguida de entrevista. A aprovação não é automática — cada candidatura é avaliada individualmente.
               </div>
             </div>
           </div>
