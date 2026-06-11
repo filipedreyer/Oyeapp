@@ -19,86 +19,103 @@ const CRITERIA = [
 
 export default function ProviderApplicationIntroPage() {
   return (
-    <div style={{ background: 'var(--paper)', minHeight: '100vh' }}>
-      <div className="container" style={{ padding: 'var(--space-16) var(--space-8)', maxWidth: 800, margin: '0 auto' }}>
-
-        {/* Breadcrumb */}
-        <div style={{ marginBottom: 'var(--space-8)' }}>
-          <Link to="/provedores" style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)' }}>
+    <>
+      <section className="diag-hero">
+        <div style={{ marginBottom: '12px' }}>
+          <Link to="/provedores" style={{ fontSize: '0.8125rem', color: 'var(--muted)', letterSpacing: '-0.01em' }}>
             ← Provedores
           </Link>
         </div>
-
-        <p className="eyebrow" style={{ marginBottom: 'var(--space-2)' }}>Candidatura</p>
-        <h1 style={{ fontSize: 'var(--text-3xl)', fontWeight: 900, letterSpacing: 'var(--tracking-tighter)', marginBottom: 'var(--space-4)' }}>
-          Sobre o processo de candidatura
-        </h1>
-        <p className="lead-text" style={{ color: 'var(--muted)', marginBottom: 'var(--space-10)' }}>
+        <span className="pub-eyebrow">Candidatura</span>
+        <h1 className="diag-hero__title">Sobre o processo<br />de candidatura</h1>
+        <p className="diag-hero__lead">
           Antes de iniciar, entenda o que será perguntado, os critérios de avaliação e o tempo estimado.
         </p>
+      </section>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-10)', marginBottom: 'var(--space-10)' }}>
+      <section className="pub-section pub-section--paper2">
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'start' }}>
 
-          {/* What will be asked */}
-          <div>
-            <p className="section-label" style={{ marginBottom: 'var(--space-5)' }}>O que será perguntado</p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
-              {WHAT_WILL_BE_ASKED.map((item, i) => (
-                <div key={item.label} style={{ display: 'flex', gap: 'var(--space-4)', padding: 'var(--space-4)', background: 'var(--white)', border: 'var(--border)' }}>
-                  <div style={{ width: 24, height: 24, background: 'var(--ink)', color: 'var(--white)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'var(--text-xs)', fontWeight: 700, flexShrink: 0 }}>
-                    {i + 1}
+            <div>
+              <span className="pub-eyebrow">O que será perguntado</span>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0',
+                border: '1px solid var(--line)',
+                backgroundColor: 'var(--line)',
+                marginTop: '32px',
+              }}>
+                {WHAT_WILL_BE_ASKED.map((item, i) => (
+                  <div key={item.label} style={{
+                    display: 'flex',
+                    gap: '16px',
+                    padding: '20px 24px',
+                    backgroundColor: 'var(--white)',
+                    borderBottom: '1px solid var(--line)',
+                    alignItems: 'flex-start',
+                  }}>
+                    <div style={{
+                      width: 24, height: 24,
+                      backgroundColor: 'var(--ink)',
+                      color: 'var(--white)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '0.6875rem',
+                      fontWeight: 800,
+                      flexShrink: 0,
+                    }}>
+                      {i + 1}
+                    </div>
+                    <div>
+                      <div style={{ fontWeight: 700, fontSize: '0.9375rem', letterSpacing: '-0.02em', color: 'var(--ink)', marginBottom: '2px' }}>
+                        {item.label}
+                      </div>
+                      <div style={{ fontSize: '0.8125rem', color: 'var(--muted)', lineHeight: 1.5 }}>
+                        {item.desc}
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <div style={{ fontWeight: 700, fontSize: 'var(--text-sm)', marginBottom: 'var(--space-1)' }}>{item.label}</div>
-                    <div style={{ fontSize: 'var(--text-xs)', color: 'var(--muted)', lineHeight: 'var(--leading-relaxed)' }}>{item.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Criteria + info */}
-          <div>
-            <div style={{ marginBottom: 'var(--space-8)' }}>
-              <p className="section-label" style={{ marginBottom: 'var(--space-5)' }}>Critérios de homologação</p>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
-                {CRITERIA.map(c => (
-                  <li key={c} style={{ display: 'flex', gap: 'var(--space-3)', fontSize: 'var(--text-sm)', color: 'var(--ink-soft)', lineHeight: 'var(--leading-relaxed)' }}>
-                    <span style={{ color: 'var(--positive)', fontWeight: 900, flexShrink: 0 }}>✓</span>
-                    {c}
-                  </li>
                 ))}
+              </div>
+            </div>
+
+            <div>
+              <span className="pub-eyebrow">Critérios de homologação</span>
+              <ul className="profile-list" style={{ marginTop: '32px' }}>
+                {CRITERIA.map(c => <li key={c}>{c}</li>)}
               </ul>
-            </div>
 
-            <div style={{ background: 'var(--sand)', padding: 'var(--space-6)', marginBottom: 'var(--space-6)' }}>
-              <div style={{ fontSize: 'var(--text-xs)', fontWeight: 700, letterSpacing: 'var(--tracking-wider)', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 'var(--space-3)' }}>
-                Tempo estimado
+              <div style={{ marginTop: '36px', padding: '28px', backgroundColor: 'var(--navy-strong)', color: 'var(--white)' }}>
+                <span style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--copper)', display: 'block', marginBottom: '12px' }}>
+                  Tempo estimado
+                </span>
+                <div style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 900, letterSpacing: '-0.08em', lineHeight: 1, color: 'var(--white)', marginBottom: '8px' }}>
+                  ~20 min
+                </div>
+                <div style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.50)', lineHeight: 1.5 }}>
+                  Você pode salvar e retomar depois.
+                </div>
               </div>
-              <div style={{ fontSize: 'var(--text-xl)', fontWeight: 900, letterSpacing: 'var(--tracking-tight)' }}>
-                ~20 minutos
-              </div>
-              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)', marginTop: 'var(--space-2)', lineHeight: 'var(--leading-relaxed)' }}>
-                Você pode salvar e retomar depois. Suas respostas ficam salvas automaticamente.
-              </p>
-            </div>
 
-            <div style={{ padding: 'var(--space-5)', border: 'var(--border)', background: 'var(--white)', fontSize: 'var(--text-sm)', color: 'var(--muted)', lineHeight: 'var(--leading-relaxed)' }}>
-              <strong style={{ color: 'var(--ink)' }}>Próximos passos após o envio:</strong> Análise em até 5 dias úteis, seguida de entrevista. A homologação não é automática — cada candidatura é avaliada individualmente.
+              <div style={{ marginTop: '16px', padding: '24px 28px', border: '1px solid var(--line)', backgroundColor: 'var(--white)', fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.6 }}>
+                <strong style={{ color: 'var(--ink)' }}>Próximos passos após o envio:</strong> Análise em até 5 dias úteis, seguida de entrevista. A homologação não é automática — cada candidatura é avaliada individualmente.
+              </div>
             </div>
           </div>
-        </div>
 
-        <div style={{ display: 'flex', gap: 'var(--space-4)', alignItems: 'center', paddingTop: 'var(--space-8)', borderTop: 'var(--border)' }}>
-          <Link to="/provedores/candidatura/novo" className="btn btn-primary btn-lg">
-            Iniciar candidatura
-          </Link>
-          <Link to="/provedores" className="btn btn-ghost">
-            Voltar
-          </Link>
+          <div style={{ display: 'flex', gap: '12px', alignItems: 'center', paddingTop: '48px', borderTop: '1px solid var(--line)', marginTop: '48px' }}>
+            <Link to="/provedores/candidatura/novo" className="btn btn-primary btn-lg">
+              Iniciar candidatura
+            </Link>
+            <Link to="/provedores" className="btn btn-secondary btn-lg">
+              Voltar
+            </Link>
+          </div>
         </div>
-
-      </div>
-    </div>
+      </section>
+    </>
   )
 }

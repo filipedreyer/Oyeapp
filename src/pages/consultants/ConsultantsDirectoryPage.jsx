@@ -6,54 +6,47 @@ import { PROVIDER_TYPE_LABELS, AVAILABILITY_LABELS, PRICE_CATEGORY_LABELS } from
 const SECTORS = ['Todos', 'Varejo', 'Indústria', 'Financeiro', 'Tecnologia', 'Agronegócio', 'Saúde', 'Outros']
 const PROBLEM_TYPES = ['Todos', 'Estratégia', 'Operações', 'Finanças', 'Tecnologia', 'Pessoas', 'Marketing']
 const AVAILABILITY_OPTIONS = [
-  { value: '', label: 'Todos' },
+  { value: '', label: 'Disponibilidade' },
   { value: 'disponivel', label: 'Disponível' },
   { value: 'parcial', label: 'Parcialmente disponível' },
   { value: 'indisponivel', label: 'Indisponível' },
 ]
 
-function AvailabilityIndicator({ availability }) {
-  const label = AVAILABILITY_LABELS[availability] || availability
-  return (
-    <div className="availability-indicator">
-      <span className={`availability-dot ${availability}`} />
-      <span className={`availability-text ${availability}`}>{label}</span>
-    </div>
-  )
+const AVAIL_CONFIG = {
+  disponivel:   { cls: 'availability-dot--available',   label: 'Disponível' },
+  parcial:      { cls: 'availability-dot--partial',     label: 'Parcial' },
+  indisponivel: { cls: 'availability-dot--unavailable', label: 'Indisponível' },
 }
 
-function ConsultantCard({ provider }) {
+function DirectoryCard({ provider }) {
   const typeLabel = PROVIDER_TYPE_LABELS[provider.type] || provider.type
-  const priceLabel = PRICE_CATEGORY_LABELS[provider.priceCategory] || provider.priceCategory
+  const avail = AVAIL_CONFIG[provider.availability] || AVAIL_CONFIG.indisponivel
 
   return (
-    <div className="consultant-card">
-      <div>
-        <div className="consultant-card-name">{provider.name}</div>
-        <div className="consultant-card-type">{typeLabel}</div>
+    <div className="directory-card">
+      <div className="directory-card__photo">
+        {provider.name.charAt(0)}
       </div>
-
-      <div className="consultant-card-sectors">
-        {provider.sectors.slice(0, 3).map(s => (
-          <span key={s} className="sector-tag">{s}</span>
-        ))}
-        {provider.sectors.length > 3 && (
-          <span className="sector-tag">+{provider.sectors.length - 3}</span>
-        )}
-      </div>
-
-      <ul className="consultant-card-specialties">
-        {provider.specialties.slice(0, 3).map(sp => (
-          <li key={sp}>{sp}</li>
-        ))}
-      </ul>
-
-      <div className="consultant-card-footer">
-        <AvailabilityIndicator availability={provider.availability} />
-        <div className="consultant-price-label">{priceLabel}</div>
-        <Link to={`/consultores/${provider.slug}`} className="btn btn-secondary btn-sm">
-          Ver perfil
-        </Link>
+      <div className="directory-card__body">
+        <div className="directory-card__name">{provider.name}</div>
+        <div className="directory-card__meta">{typeLabel} · {provider.region}</div>
+        <div className="directory-card__tags">
+          {provider.sectors.slice(0, 3).map(s => (
+            <span key={s} className="sector-tag">{s}</span>
+          ))}
+          {provider.sectors.length > 3 && (
+            <span className="sector-tag">+{provider.sectors.length - 3}</span>
+          )}
+        </div>
+        <div className="directory-card__footer">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span className={`availability-dot ${avail.cls}`} />
+            <span className="availability-label">{avail.label}</span>
+          </div>
+          <Link to={`/consultores/${provider.slug}`} className="btn btn-secondary btn-sm">
+            Ver perfil →
+          </Link>
+        </div>
       </div>
     </div>
   )
@@ -66,7 +59,6 @@ export default function ConsultantsDirectoryPage() {
   const [availabilityFilter, setAvailabilityFilter] = useState('')
 
   const filtered = mockProviders.filter(p => {
-    // Search
     if (search.trim()) {
       const q = search.toLowerCase()
       const match =
@@ -75,15 +67,12 @@ export default function ConsultantsDirectoryPage() {
         p.bio.toLowerCase().includes(q)
       if (!match) return false
     }
-    // Sector filter
     if (sectorFilter && sectorFilter !== 'Todos') {
       if (!p.sectors.some(s => s.toLowerCase().includes(sectorFilter.toLowerCase()))) return false
     }
-    // Problem type filter
     if (problemFilter && problemFilter !== 'Todos') {
       if (!p.problemTypes.some(pt => pt.toLowerCase().includes(problemFilter.toLowerCase()))) return false
     }
-    // Availability
     if (availabilityFilter) {
       if (p.availability !== availabilityFilter) return false
     }
@@ -91,93 +80,74 @@ export default function ConsultantsDirectoryPage() {
   })
 
   return (
-    <div style={{ background: 'var(--paper)', minHeight: '100vh' }}>
-      <div className="container" style={{ padding: 'var(--space-16) var(--space-8)' }}>
-
-        {/* Header */}
-        <div style={{ marginBottom: 'var(--space-10)' }}>
-          <p className="eyebrow">Rede Oyê</p>
-          <h1 style={{ fontSize: 'var(--text-3xl)', fontWeight: 900, letterSpacing: 'var(--tracking-tighter)', margin: 'var(--space-2) 0 var(--space-4)' }}>
-            Diretório de Consultores
-          </h1>
-          <p className="lead-text" style={{ color: 'var(--muted)', maxWidth: 600 }}>
+    <div>
+      <div className="directory-header">
+        <div className="directory-header__inner">
+          <span className="pub-eyebrow">Rede Oyê</span>
+          <h1 className="directory-title">Diretório de<br />Consultores</h1>
+          <p className="directory-lead">
             Provedores homologados pela equipe Oyê, curados por expertise e resultados comprovados.
+            A contratação acontece após o diagnóstico e a definição de fit.
           </p>
         </div>
+      </div>
 
-        {/* Alert */}
-        <div className="alert alert-info" style={{ marginBottom: 'var(--space-8)' }}>
-          <strong>Acesso curado.</strong> Estes consultores são selecionados e homologados pela equipe Oyê. A contratação direta não está disponível — ela acontece após o diagnóstico e a definição de fit.
-        </div>
+      <div className="directory-controls">
+        <input
+          className="directory-search"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          placeholder="Buscar por nome ou especialidade..."
+        />
+        <select
+          className="directory-filter"
+          value={sectorFilter}
+          onChange={e => setSectorFilter(e.target.value)}
+        >
+          {SECTORS.map(s => <option key={s} value={s}>{s}</option>)}
+        </select>
+        <select
+          className="directory-filter"
+          value={problemFilter}
+          onChange={e => setProblemFilter(e.target.value)}
+        >
+          {PROBLEM_TYPES.map(s => <option key={s} value={s}>{s}</option>)}
+        </select>
+        <select
+          className="directory-filter"
+          value={availabilityFilter}
+          onChange={e => setAvailabilityFilter(e.target.value)}
+        >
+          {AVAILABILITY_OPTIONS.map(o => (
+            <option key={o.value} value={o.value}>{o.label}</option>
+          ))}
+        </select>
+        {(search || sectorFilter !== 'Todos' || problemFilter !== 'Todos' || availabilityFilter) && (
+          <button
+            className="btn btn-ghost btn-sm"
+            onClick={() => { setSearch(''); setSectorFilter('Todos'); setProblemFilter('Todos'); setAvailabilityFilter('') }}
+          >
+            Limpar
+          </button>
+        )}
+      </div>
 
-        {/* Filters */}
-        <div className="filter-bar">
-          <div className="search-input-wrap filter-bar-group">
-            <label className="filter-bar-label">Buscar</label>
-            <input
-              className="form-input"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              placeholder="Nome ou especialidade..."
-            />
-          </div>
-
-          <div className="filter-bar-group">
-            <label className="filter-bar-label">Setor</label>
-            <select
-              className="form-select"
-              value={sectorFilter}
-              onChange={e => setSectorFilter(e.target.value)}
-            >
-              {SECTORS.map(s => <option key={s} value={s}>{s}</option>)}
-            </select>
-          </div>
-
-          <div className="filter-bar-group">
-            <label className="filter-bar-label">Tipo de problema</label>
-            <select
-              className="form-select"
-              value={problemFilter}
-              onChange={e => setProblemFilter(e.target.value)}
-            >
-              {PROBLEM_TYPES.map(s => <option key={s} value={s}>{s}</option>)}
-            </select>
-          </div>
-
-          <div className="filter-bar-group">
-            <label className="filter-bar-label">Disponibilidade</label>
-            <select
-              className="form-select"
-              value={availabilityFilter}
-              onChange={e => setAvailabilityFilter(e.target.value)}
-            >
-              {AVAILABILITY_OPTIONS.map(o => (
-                <option key={o.value} value={o.value}>{o.label}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        {/* Results count */}
-        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)', marginBottom: 'var(--space-4)' }}>
+      <div className="directory-body">
+        <p style={{ fontSize: '0.8125rem', color: 'var(--muted)', marginBottom: '28px', letterSpacing: '-0.01em' }}>
           {filtered.length} {filtered.length === 1 ? 'provedor encontrado' : 'provedores encontrados'}
         </p>
 
-        {/* Grid */}
         {filtered.length > 0 ? (
           <div className="directory-grid">
             {filtered.map(p => (
-              <ConsultantCard key={p.id} provider={p} />
+              <DirectoryCard key={p.id} provider={p} />
             ))}
           </div>
         ) : (
-          <div style={{ padding: 'var(--space-16)', textAlign: 'center', border: 'var(--border)', background: 'var(--white)' }}>
-            <p style={{ color: 'var(--muted)', fontSize: 'var(--text-base)' }}>
-              Nenhum provedor encontrado com os filtros selecionados.
-            </p>
+          <div className="directory-empty">
+            <p style={{ marginBottom: '16px' }}>Nenhum provedor encontrado com os filtros selecionados.</p>
             <button
-              className="btn btn-ghost"
-              style={{ marginTop: 'var(--space-4)' }}
+              className="btn btn-secondary btn-sm"
               onClick={() => { setSearch(''); setSectorFilter('Todos'); setProblemFilter('Todos'); setAvailabilityFilter('') }}
             >
               Limpar filtros
@@ -185,23 +155,17 @@ export default function ConsultantsDirectoryPage() {
           </div>
         )}
 
-        {/* Bottom note */}
-        <div style={{ marginTop: 'var(--space-12)', padding: 'var(--space-6)', background: 'var(--sand)', fontSize: 'var(--text-sm)', color: 'var(--muted)', lineHeight: 'var(--leading-relaxed)' }}>
-          O diretório mostra apenas provedores homologados pela equipe Oyê. A contratação acontece após o diagnóstico e a definição de fit.
+        <div className="directory-notice" style={{ marginTop: '32px' }}>
+          O diretório mostra apenas provedores homologados pela equipe Oyê. A contratação acontece após o diagnóstico e a definição de fit entre demanda e provedor.
         </div>
 
-        {/* Provider CTA */}
-        <div style={{ marginTop: 'var(--space-10)', padding: 'var(--space-8)', background: 'var(--white)', border: 'var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-6)', flexWrap: 'wrap' }}>
-          <div>
-            <p style={{ fontWeight: 700, fontSize: 'var(--text-md)', marginBottom: 'var(--space-2)' }}>
-              Você é consultor ou provedor de solução?
-            </p>
-            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)' }}>
-              Faça parte da rede Oyê e receba demandas qualificadas.
-            </p>
+        <div className="providers-join" style={{ marginTop: '32px' }}>
+          <div className="providers-join__text">
+            <div className="providers-join__title">Você é consultor ou provedor de solução?</div>
+            <p className="providers-join__sub">Faça parte da rede Oyê e receba demandas qualificadas.</p>
           </div>
-          <Link to="/provedores" className="btn btn-secondary">
-            Saiba como entrar
+          <Link to="/provedores" className="btn btn-primary">
+            Saiba como entrar →
           </Link>
         </div>
       </div>
