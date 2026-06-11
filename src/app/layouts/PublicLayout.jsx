@@ -4,25 +4,30 @@ export default function PublicLayout() {
   return (
     <div className="public-layout">
       <header className="public-header">
-        <div className="container">
-          <Link to="/" className="public-header__logo">
-            Oyê
+        <Link to="/" className="public-header__logo">Oyê</Link>
+
+        <nav className="public-header__nav">
+          <NavLink to="/metodologia" className={({ isActive }) => isActive ? 'active' : ''}>
+            Metodologia
+          </NavLink>
+          <NavLink to="/sobre" className={({ isActive }) => isActive ? 'active' : ''}>
+            Sobre
+          </NavLink>
+          <NavLink to="/consultores" className={({ isActive }) => isActive ? 'active' : ''}>
+            Consultores
+          </NavLink>
+          <NavLink to="/provedores" className={({ isActive }) => isActive ? 'active' : ''}>
+            Para Provedores
+          </NavLink>
+        </nav>
+
+        <div className="public-header__actions">
+          <Link to="/cliente/login" className="btn btn-ghost btn-sm">
+            Entrar
           </Link>
-
-          <nav className="public-header__nav">
-            <NavLink to="/metodologia">Metodologia</NavLink>
-            <NavLink to="/sobre">Sobre</NavLink>
-            <NavLink to="/consultores">Consultores</NavLink>
-          </nav>
-
-          <div className="public-header__actions">
-            <Link to="/cliente/login" className="btn btn-ghost btn-sm">
-              Entrar
-            </Link>
-            <Link to="/diagnostico/empresa" className="btn btn-primary btn-sm">
-              Iniciar Diagnóstico
-            </Link>
-          </div>
+          <Link to="/diagnostico/empresa" className="btn btn-primary btn-sm">
+            Iniciar Diagnóstico
+          </Link>
         </div>
       </header>
 
@@ -32,33 +37,40 @@ export default function PublicLayout() {
 
       <footer className="public-footer">
         <div className="container">
-          <div className="public-footer__brand">
+          <div>
             <Link to="/" className="public-footer__logo">Oyê</Link>
             <p className="public-footer__tagline">
-              Diagnóstico estratégico e roteamento inteligente para projetos de consultoria.
+              Diagnóstico estratégico antes da solução. Conectamos empresas à solução certa para o problema certo.
             </p>
           </div>
 
-          <div className="public-footer__links">
+          <div>
             <div className="public-footer__link-group">
               <h4>Plataforma</h4>
               <ul>
                 <li><Link to="/metodologia">Metodologia</Link></li>
                 <li><Link to="/sobre">Sobre</Link></li>
+                <li><Link to="/diagnostico/empresa">Iniciar Diagnóstico</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div className="public-footer__link-group">
+              <h4>Rede</h4>
+              <ul>
                 <li><Link to="/consultores">Consultores</Link></li>
-              </ul>
-            </div>
-            <div className="public-footer__link-group">
-              <h4>Parceiros</h4>
-              <ul>
-                <li><Link to="/provedores">Provedores</Link></li>
+                <li><Link to="/provedores">Para Provedores</Link></li>
                 <li><Link to="/provedores/candidatura">Candidatura</Link></li>
-                <li><Link to="/contato">Contato</Link></li>
               </ul>
             </div>
+          </div>
+
+          <div>
             <div className="public-footer__link-group">
-              <h4>Legal</h4>
+              <h4>Empresa</h4>
               <ul>
+                <li><Link to="/contato">Contato</Link></li>
                 <li><Link to="/termos">Termos de Uso</Link></li>
                 <li><Link to="/privacidade">Privacidade</Link></li>
               </ul>

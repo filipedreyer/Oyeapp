@@ -1,93 +1,73 @@
 import { Link } from 'react-router-dom'
 
-const founders = [
+const FOUNDERS = [
   {
+    initial: 'A',
     name: 'Amanda Marangoni',
-    role: 'Estratégia Comercial',
-    bio: 'Mais de 12 anos de experiência em desenvolvimento comercial e estratégia de crescimento em grandes redes varejistas. Amanda construiu a tese de que empresas perdem dinheiro não por falta de ferramentas, mas por diagnosticar mal os próprios problemas.',
+    role: 'Estratégia Comercial & Performance',
+    bio: 'Renner, Boticário. 13 anos formando times e estruturando estratégias comerciais em grandes redes do varejo brasileiro.',
   },
   {
+    initial: 'F',
     name: 'Filipe Dreyer',
     role: 'Customer Experience & Operações',
-    bio: 'Especialista em jornada do cliente e eficiência operacional com passagem por operações de varejo de alta complexidade. Filipe foi o arquiteto do framework de diagnóstico que se tornou o núcleo metodológico da Oyê.',
+    bio: 'Renner, SAP, Kimberly-Clark. 20+ anos conectando experiência do cliente à eficiência operacional em empresas de grande porte.',
   },
   {
+    initial: 'C',
     name: 'Carolina Almeida',
-    role: 'Supply Chain',
-    bio: 'Engenheira com MBA em Gestão de Cadeias de Suprimentos, Carolina viu de perto como soluções tecnológicas eram implantadas em problemas que não eram de tecnologia. Essa frustração tornou-se o motor para criar uma plataforma de diagnóstico antes de recomendação.',
+    role: 'Supply Chain & Cadeia Produtiva',
+    bio: 'Renner, Grupo Soma, Stihl. 20+ anos otimizando cadeias produtivas e estruturando operações do fornecedor ao cliente final.',
   },
 ]
 
-const values = [
-  {
-    title: 'Método & Rigor Técnico',
-    text: 'Cada recomendação nasce de um processo estruturado. Não intuição — dado, dimensão, análise.',
-  },
-  {
-    title: 'Curadoria Especializada',
-    text: 'A rede Oyê não é um diretório. É uma seleção rigorosa de especialistas com cases reais documentados.',
-  },
-  {
-    title: 'Inteligência de Dados',
-    text: 'Cada caso resolvido melhora o próximo diagnóstico. A plataforma aprende com a experiência acumulada.',
-  },
-  {
-    title: 'Relações que Importam',
-    text: 'Oyê não apenas conecta. Acompanha. A relação não termina no match — termina na prova do resultado.',
-  },
-  {
-    title: 'Execução com Precisão',
-    text: 'A estratégia sem execução é ilusão. Oyê garante que a rota recomendada seja percorrida até o fim.',
-  },
-  {
-    title: 'Confidencialidade Absoluta',
-    text: 'O problema que você traz é seu. Tratamos cada diagnóstico com o mesmo sigilo que tratamos os nossos.',
-  },
+const VALUES = [
+  { num: '01', t: 'Método & Rigor Técnico', d: 'Frameworks proprietários e curadoria especializada. Engenharia antes de opinião.' },
+  { num: '02', t: 'Diagnóstico Preciso', d: 'Acerto no diagnóstico como base de qualquer solução com ROI real.' },
+  { num: '03', t: 'Inteligência Coletiva', d: 'Dados que circulam e conhecimento que se acumula em cada caso.' },
+  { num: '04', t: 'Curadoria Especializada', d: 'Cada provedor passa por homologação rigorosa. Não somos um diretório aberto.' },
+  { num: '05', t: 'Relações que Importam', d: 'Acreditamos que relações construídas com respeito criam colaboração genuína.' },
+  { num: '06', t: 'Execução com Precisão', d: 'Entrega com rigor de operação industrial, não de consultoria genérica.' },
 ]
 
 export default function AboutPage() {
   return (
-    <div>
+    <>
       {/* Hero */}
-      <section className="section-hero">
+      <section className="diag-hero">
         <div className="container">
-          <p className="eyebrow">Sobre a Oyê</p>
-          <h1 style={{ marginTop: 'var(--space-4)', marginBottom: 'var(--space-6)', maxWidth: '720px' }}>
-            O problema certo muda tudo.
-          </h1>
-          <p className="lead-text" style={{ maxWidth: '560px' }}>
-            Oyê nasceu da experiência acumulada dentro de grandes redes de varejo — onde fundadores
-            viram, repetidamente, soluções sofisticadas aplicadas a diagnósticos errados.
+          <span className="pub-eyebrow">Sobre a Oyê</span>
+          <h1 className="diag-hero__title">O problema certo<br />muda tudo.</h1>
+          <p className="diag-hero__lead">
+            A Oyê nasceu da observação de que o mercado oferece consultoria
+            com a solução pronta antes de entender o problema. Viemos corrigir isso.
           </p>
         </div>
       </section>
 
-      {/* Origin story */}
-      <section className="section" style={{ backgroundColor: 'var(--white)' }}>
+      {/* Origin */}
+      <section className="pub-section pub-section--white">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-16)', alignItems: 'start' }}>
+          <span className="pub-eyebrow">Origem</span>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'start', marginTop: '16px' }}>
             <div>
-              <p className="section-label">A origem</p>
-              <h2 style={{ marginBottom: 'var(--space-6)' }}>
-                Nasceu da frustração de ver a solução certa no problema errado
+              <h2 className="pub-headline" style={{ marginBottom: '24px' }}>
+                Por mais de 13 anos, vimos o mesmo erro sendo repetido.
               </h2>
             </div>
-            <div>
-              <p style={{ fontSize: 'var(--text-base)', lineHeight: 'var(--leading-relaxed)', color: 'var(--ink-soft)', marginBottom: 'var(--space-4)' }}>
-                Os três fundadores da Oyê se conheceram dentro de operações de varejo de grande
-                escala. Durante anos, viram a mesma cena se repetir: consultorias renomadas,
-                soluções tecnológicas avançadas e times talentosos sendo aplicados a problemas
-                que haviam sido mal diagnosticados.
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <p style={{ fontSize: 'var(--t-body-lg)', color: 'var(--muted)', lineHeight: 'var(--lh-lead)', letterSpacing: 'var(--ls-sub)' }}>
+                Quando o resultado caía, alguém decretava uma solução: treinamento,
+                reestruturação, nova campanha. A solução era rápida, cara, intensa
+                e quase sempre errada. Não era falta de competência — era falta de diagnóstico.
               </p>
-              <p style={{ fontSize: 'var(--text-base)', lineHeight: 'var(--leading-relaxed)', color: 'var(--ink-soft)', marginBottom: 'var(--space-4)' }}>
-                O resultado era sempre o mesmo — soluções que tecnicamente funcionavam, mas que
-                não resolviam o que realmente incomodava. Tempo perdido, recursos desperdiçados
-                e uma empresa que voltava ao ponto de partida alguns meses depois.
+              <p style={{ fontSize: 'var(--t-body-lg)', color: 'var(--muted)', lineHeight: 'var(--lh-lead)', letterSpacing: 'var(--ls-sub)' }}>
+                Os três fundadores chegaram à mesma conclusão por caminhos diferentes,
+                cobrindo a cadeia completa — do fornecedor ao cliente final. Juntos, tinham
+                o diagnóstico que o mercado não oferecia.
               </p>
-              <p style={{ fontSize: 'var(--text-base)', lineHeight: 'var(--leading-relaxed)', color: 'var(--ink-soft)' }}>
-                A pergunta que fundou a Oyê foi simples: e se existisse uma plataforma que
-                diagnosticasse com rigor antes de recomendar qualquer solução? Que tratasse o
-                problema como o ativo estratégico que ele é — antes de vendê-lo para um provedor?
+              <p style={{ fontSize: 'var(--t-body-lg)', color: 'var(--ink)', lineHeight: 'var(--lh-lead)', letterSpacing: 'var(--ls-sub)', fontWeight: 600 }}>
+                Foi assim que nasceu a Oyê.
               </p>
             </div>
           </div>
@@ -95,17 +75,17 @@ export default function AboutPage() {
       </section>
 
       {/* Founders */}
-      <section className="section" style={{ backgroundColor: 'var(--paper)' }}>
+      <section className="pub-section pub-section--paper">
         <div className="container">
-          <p className="section-label">Quem fundou</p>
-          <h2 style={{ marginBottom: 'var(--space-12)' }}>Time fundador</h2>
-
-          <div className="team-grid">
-            {founders.map(founder => (
-              <div key={founder.name} className="team-card">
-                <div className="team-card__name">{founder.name}</div>
-                <div className="team-card__role">{founder.role}</div>
-                <p className="team-card__bio">{founder.bio}</p>
+          <span className="pub-eyebrow">Fundadores</span>
+          <h2 className="pub-headline">Três perspectivas.<br />Uma cadeia completa.</h2>
+          <div className="founders-grid">
+            {FOUNDERS.map(f => (
+              <div key={f.name} className="founder-card">
+                <div className="founder-card__initial">{f.initial}</div>
+                <div className="founder-card__name">{f.name}</div>
+                <div className="founder-card__role">{f.role}</div>
+                <p className="founder-card__bio">{f.bio}</p>
               </div>
             ))}
           </div>
@@ -113,16 +93,16 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="section" style={{ backgroundColor: 'var(--paper-2)' }}>
+      <section className="pub-section pub-section--white">
         <div className="container">
-          <p className="section-label">O que nos move</p>
-          <h2 style={{ marginBottom: 'var(--space-12)' }}>Valores que estruturam a plataforma</h2>
-
+          <span className="pub-eyebrow">Valores</span>
+          <h2 className="pub-headline">O que orienta cada decisão.</h2>
           <div className="values-grid">
-            {values.map(v => (
-              <div key={v.title} className="value-item">
-                <div className="value-item__title">{v.title}</div>
-                <p className="value-item__text">{v.text}</p>
+            {VALUES.map(v => (
+              <div key={v.num} className="value-item">
+                <span className="value-item__num">{v.num}</span>
+                <div className="value-item__title">{v.t}</div>
+                <p className="value-item__text">{v.d}</p>
               </div>
             ))}
           </div>
@@ -130,37 +110,20 @@ export default function AboutPage() {
       </section>
 
       {/* Manifesto */}
-      <section className="manifesto-section">
+      <div className="manifesto-section">
         <div className="container">
-          <p style={{ fontSize: 'var(--text-xs)', fontWeight: 700, letterSpacing: 'var(--tracking-wider)', textTransform: 'uppercase', color: 'var(--copper)', marginBottom: 'var(--space-10)' }}>
-            Manifesto Oyê
-          </p>
-          <div className="manifesto-text">
-            <p>Acreditamos que o problema bem diagnosticado já é metade da solução.</p>
-            <p>Acreditamos que a solução errada, aplicada com excelência, ainda é a solução errada.</p>
-            <p>Acreditamos que a relação entre empresa e consultor deve começar pelo rigor, não pelo pitch.</p>
-            <p>Acreditamos que dados acumulados de casos reais valem mais do que qualquer framework genérico.</p>
-            <p>Acreditamos que acompanhar a execução é responsabilidade de quem fez o diagnóstico.</p>
-            <p style={{ color: 'var(--white)', fontWeight: 800 }}>
-              Por isso existe a Oyê. Problemas reais. Soluções certas.
-            </p>
+          <span className="pub-eyebrow" style={{ color: 'var(--copper)', marginBottom: '36px' }}>Manifesto</span>
+          <p><strong>Acreditamos que toda empresa merece saber qual é o problema real</strong> antes de contratar qualquer solução.</p>
+          <p>Acreditamos que diagnóstico errado não é neutro — é investimento negativo.</p>
+          <p>Acreditamos que o conhecimento acumulado em cada caso tem valor além do projeto em si.</p>
+          <p><strong>Acreditamos que a solução certa nasce do problema certo.</strong></p>
+          <div style={{ marginTop: '48px' }}>
+            <Link to="/diagnostico/empresa" className="btn btn-white btn-lg">
+              Iniciar diagnóstico →
+            </Link>
           </div>
         </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta-section">
-        <div className="container">
-          <h2>Quer trabalhar com esse princípio na sua empresa?</h2>
-          <p className="cta-section__sub">
-            Inicie o diagnóstico. Gratuito, estruturado e sem compromisso.
-          </p>
-          <Link to="/diagnostico/empresa" className="btn btn-white btn-lg">
-            Iniciar Diagnóstico
-          </Link>
-          <Link to="/contato" className="cta-section__link">Ou fale com a equipe</Link>
-        </div>
-      </section>
-    </div>
+      </div>
+    </>
   )
 }
