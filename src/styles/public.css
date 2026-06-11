@@ -162,7 +162,7 @@
 .hero-eyebrow {
   display: block;
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted-2);
@@ -171,7 +171,7 @@
 
 .hero-title {
   font-size: var(--t-display);
-  font-weight: 900;
+  font-weight: 700;
   line-height: var(--lh-display);
   letter-spacing: var(--ls-display);
   color: var(--ink);
@@ -250,7 +250,7 @@
 .pub-eyebrow {
   display: block;
   font-size: 0.6875rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted-2);
@@ -259,7 +259,7 @@
 
 .pub-headline {
   font-size: var(--t-headline);
-  font-weight: 900;
+  font-weight: 600;
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-headline);
   color: var(--ink);
@@ -298,7 +298,7 @@
 
 .thesis-item__num {
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.12em;
   color: var(--navy-mid);
   margin-bottom: 24px;
@@ -307,7 +307,7 @@
 
 .thesis-item__title {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 1.15;
   color: var(--ink);
@@ -330,7 +330,7 @@
 
 .thesis-pullquote__text {
   font-size: clamp(1.4rem, 2.8vw, 2.4rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.045em;
   color: var(--white);
@@ -385,7 +385,7 @@
 
 .method-item__title {
   font-size: clamp(1.15rem, 2vw, 1.6rem);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 1.1;
   color: var(--ink);
@@ -420,7 +420,7 @@
 
 .intel-stat__num {
   font-size: clamp(2.4rem, 5vw, 4.2rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.08em;
   line-height: 0.9;
   color: var(--white);
@@ -460,7 +460,7 @@
   display: grid;
   place-items: center;
   font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.08em;
   color: rgba(17,17,17,0.18);
   overflow: hidden;
@@ -486,7 +486,7 @@
 
 .consultant-card__name {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 1.1;
   color: var(--ink);
@@ -564,7 +564,7 @@
 
 .providers-join__title {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   color: var(--ink);
   margin-bottom: 6px;
@@ -588,7 +588,7 @@
 
 .final-cta__headline {
   font-size: var(--t-headline);
-  font-weight: 900;
+  font-weight: 700;
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-headline);
   color: var(--white);
@@ -631,7 +631,7 @@
 
 .directory-title {
   font-size: var(--t-headline);
-  font-weight: 900;
+  font-weight: 700;
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-headline);
   color: var(--ink);
@@ -705,7 +705,7 @@
   display: grid;
   place-items: center;
   font-size: clamp(2.4rem, 5vw, 4.4rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.08em;
   color: rgba(17,17,17,0.16);
   position: relative;
@@ -725,7 +725,7 @@
 
 .directory-card__name {
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   color: var(--ink);
   margin-bottom: 4px;
@@ -806,7 +806,7 @@
   display: grid;
   place-items: center;
   font-size: 2.4rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.06em;
   color: rgba(17,17,17,0.2);
   flex-shrink: 0;
@@ -817,7 +817,7 @@
 
 .profile-header__name {
   font-size: clamp(1.8rem, 3.5vw, 3.2rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.065em;
   line-height: 0.95;
   color: var(--ink);
@@ -856,7 +856,7 @@
 
 .profile-section__title {
   font-size: 0.6875rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
@@ -904,7 +904,7 @@
 
 .case-card__title {
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--ink);
   margin-bottom: 10px;
@@ -953,7 +953,7 @@
 
 .fit-cta-box__eyebrow {
   font-size: 0.6875rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--navy-mid);
@@ -963,7 +963,7 @@
 
 .fit-cta-box__title {
   font-size: 1.35rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 1.15;
   color: var(--white);
@@ -1027,7 +1027,7 @@
 
 .diag-hero__title {
   font-size: var(--t-headline);
-  font-weight: 900;
+  font-weight: 600;
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-headline);
   color: var(--ink);
@@ -1063,7 +1063,7 @@
 
 .entry-card__num {
   font-size: 0.6875rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--navy-mid);
@@ -1072,7 +1072,7 @@
 
 .entry-card__title {
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.2;
   color: var(--ink);
@@ -1116,7 +1116,7 @@
 
 .diag-timeline-step__num {
   font-size: 0.6875rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.12em;
   color: var(--navy-mid);
   text-transform: uppercase;
@@ -1149,7 +1149,7 @@
 
 .providers-hero__title {
   font-size: var(--t-headline);
-  font-weight: 900;
+  font-weight: 700;
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-headline);
   color: var(--white);
@@ -1181,7 +1181,7 @@
 
 .process-step__num {
   font-size: clamp(2rem, 4vw, 3.4rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.08em;
   color: var(--sand);
   margin-bottom: 16px;
@@ -1190,7 +1190,7 @@
 
 .process-step__title {
   font-size: 0.9375rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--ink);
   margin-bottom: 8px;
@@ -1226,7 +1226,7 @@
   display: grid;
   place-items: center;
   font-size: 1.4rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.06em;
   color: var(--muted);
   margin-bottom: 20px;
@@ -1234,7 +1234,7 @@
 
 .founder-card__name {
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   color: var(--ink);
   margin-bottom: 4px;
@@ -1271,7 +1271,7 @@
 
 .value-item__num {
   font-size: 0.6875rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--navy-mid);
@@ -1280,7 +1280,7 @@
 
 .value-item__title {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--ink);
   margin-bottom: 10px;
@@ -1320,7 +1320,7 @@
 
 .gate-card__num {
   font-size: 0.6875rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--navy-mid);
@@ -1329,7 +1329,7 @@
 
 .gate-card__title {
   font-size: clamp(1.6rem, 3vw, 2.8rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.065em;
   line-height: 1.0;
   color: var(--ink);
@@ -1359,7 +1359,7 @@
 
 .gate-dim__title {
   font-size: 0.8125rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--ink);
   margin-bottom: 6px;
@@ -1415,7 +1415,7 @@
 
 .contact-title {
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.065em;
   line-height: 1.05;
   color: var(--ink);
@@ -1464,7 +1464,7 @@
 
 .contact-info-card__title {
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   color: var(--ink);
   margin-bottom: 12px;
@@ -1513,7 +1513,7 @@
 
 .legal-title {
   font-size: clamp(1.6rem, 3vw, 2.6rem);
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.065em;
   line-height: 1.05;
   color: var(--ink);
@@ -1535,7 +1535,7 @@
 
 .legal-section h2 {
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.04em;
   color: var(--ink);
   margin-bottom: 16px;
@@ -1575,7 +1575,7 @@
 
 .fit-path__title {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--ink);
   margin-bottom: 12px;

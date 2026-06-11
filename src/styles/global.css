@@ -58,12 +58,12 @@ ul, ol { list-style: none; }
 .ws-h4 { font-size: var(--text-lg);  letter-spacing: var(--tracking-snug); }
 
 /* Default heading sizes — workspace contexts use classes above */
-h1 { font-size: var(--text-3xl); font-weight: 800; line-height: var(--leading-tight); letter-spacing: var(--tracking-tighter); color: var(--ink); }
-h2 { font-size: var(--text-2xl); font-weight: 800; line-height: var(--leading-tight); letter-spacing: var(--tracking-tight); color: var(--ink); }
-h3 { font-size: var(--text-xl);  font-weight: 700; line-height: var(--leading-snug);  letter-spacing: var(--tracking-snug); color: var(--ink); }
-h4 { font-size: var(--text-lg);  font-weight: 700; line-height: var(--leading-snug);  color: var(--ink); }
-h5 { font-size: var(--text-md);  font-weight: 700; color: var(--ink); }
-h6 { font-size: var(--text-base);font-weight: 700; color: var(--ink); }
+h1 { font-size: var(--text-3xl); font-weight: 700; line-height: var(--leading-tight); letter-spacing: var(--tracking-tighter); color: var(--ink); }
+h2 { font-size: var(--text-2xl); font-weight: 600; line-height: var(--leading-tight); letter-spacing: var(--tracking-tight); color: var(--ink); }
+h3 { font-size: var(--text-xl);  font-weight: 600; line-height: var(--leading-snug);  letter-spacing: var(--tracking-snug); color: var(--ink); }
+h4 { font-size: var(--text-lg);  font-weight: 600; line-height: var(--leading-snug);  color: var(--ink); }
+h5 { font-size: var(--text-md);  font-weight: 600; color: var(--ink); }
+h6 { font-size: var(--text-base);font-weight: 600; color: var(--ink); }
 
 p { line-height: var(--lh-body); }
 
