@@ -59,7 +59,7 @@ export default function PrivacyPage() {
           <p>Os dados coletados são utilizados para as seguintes finalidades:</p>
           <ul>
             <li>Processar e estruturar o diagnóstico estratégico da empresa.</li>
-            <li>Gerar recomendações de rota e shortlist de provedores.</li>
+            <li>Gerar recomendações de rota e indicação de especialistas com fit.</li>
             <li>Comunicar sobre o andamento do diagnóstico e etapas seguintes.</li>
             <li>Melhorar os modelos de diagnóstico e match da plataforma (de forma agregada e anonimizada).</li>
             <li>Cumprir obrigações legais e regulatórias.</li>
@@ -70,7 +70,7 @@ export default function PrivacyPage() {
           <h2>4. Compartilhamento de dados</h2>
           <p>A Oyê não vende dados pessoais. Os dados são compartilhados apenas nas seguintes situações:</p>
           <ul>
-            <li>Com provedores da rede homologada, somente após autorização expressa do usuário.</li>
+            <li>Com consultores e especialistas da rede avaliada, somente após autorização expressa do usuário.</li>
             <li>Com fornecedores de tecnologia que suportam a operação da plataforma, sob contrato de confidencialidade.</li>
             <li>Com autoridades públicas, quando exigido por lei.</li>
           </ul>

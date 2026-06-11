@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, Navigate } from 'react-router-dom'
 
 // Layouts
 import PublicLayout from './layouts/PublicLayout.jsx'
@@ -14,7 +14,10 @@ import RequireOps from './guards/RequireOps.jsx'
 // Public pages
 import HomePage from '../pages/public/HomePage.jsx'
 import AboutPage from '../pages/public/AboutPage.jsx'
-import MethodologyPage from '../pages/public/MethodologyPage.jsx'
+import ForCompaniesPage from '../pages/public/ForCompaniesPage.jsx'
+import ForConsultantsPage from '../pages/public/ForConsultantsPage.jsx'
+import HowItWorksPage from '../pages/public/HowItWorksPage.jsx'
+import IntelligencePage from '../pages/public/IntelligencePage.jsx'
 import ContactPage from '../pages/public/ContactPage.jsx'
 import TermsPage from '../pages/public/TermsPage.jsx'
 import PrivacyPage from '../pages/public/PrivacyPage.jsx'
@@ -27,12 +30,12 @@ import CompanyDiagnosisStatus from '../pages/diagnosis/CompanyDiagnosisStatus.js
 import CompanyDiagnosisReview from '../pages/diagnosis/CompanyDiagnosisReview.jsx'
 import CompanyDiagnosisSubmitted from '../pages/diagnosis/CompanyDiagnosisSubmitted.jsx'
 
-// Consultants pages
+// Specialists / network pages
 import ConsultantsDirectoryPage from '../pages/consultants/ConsultantsDirectoryPage.jsx'
 import ConsultantProfilePage from '../pages/consultants/ConsultantProfilePage.jsx'
 import ConsultantFitPage from '../pages/consultants/ConsultantFitPage.jsx'
 
-// Providers-public pages
+// Providers-public pages (consultants application)
 import ProvidersLandingPage from '../pages/providers-public/ProvidersLandingPage.jsx'
 import ProviderApplicationIntroPage from '../pages/providers-public/ProviderApplicationIntroPage.jsx'
 import ProviderApplicationWizard from '../pages/providers-public/ProviderApplicationWizard.jsx'
@@ -84,11 +87,20 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <HomePage /> },
       { path: '/sobre', element: <AboutPage /> },
-      { path: '/metodologia', element: <MethodologyPage /> },
+      { path: '/para-empresas', element: <ForCompaniesPage /> },
+      { path: '/para-consultores', element: <ForConsultantsPage /> },
+      { path: '/como-funciona', element: <HowItWorksPage /> },
+      { path: '/inteligencia', element: <IntelligencePage /> },
       { path: '/contato', element: <ContactPage /> },
       { path: '/termos', element: <TermsPage /> },
       { path: '/privacidade', element: <PrivacyPage /> },
 
+      // Legacy redirects
+      { path: '/metodologia', element: <Navigate to="/como-funciona" replace /> },
+      { path: '/provedores', element: <Navigate to="/para-consultores" replace /> },
+      { path: '/consultores', element: <Navigate to="/rede-de-especialistas" replace /> },
+
+      // Diagnosis
       { path: '/diagnostico', element: <DiagnosisIntroPage /> },
       { path: '/diagnostico/empresa', element: <CompanyDiagnosisLanding /> },
       { path: '/diagnostico/empresa/novo', element: <CompanyDiagnosisWizard /> },
@@ -96,14 +108,22 @@ const router = createBrowserRouter([
       { path: '/diagnostico/empresa/:demandaId/revisao', element: <CompanyDiagnosisReview /> },
       { path: '/diagnostico/empresa/:demandaId/enviado', element: <CompanyDiagnosisSubmitted /> },
 
-      { path: '/consultores', element: <ConsultantsDirectoryPage /> },
+      // Specialist network (primary URL)
+      { path: '/rede-de-especialistas', element: <ConsultantsDirectoryPage /> },
+      { path: '/rede-de-especialistas/:consultorSlug', element: <ConsultantProfilePage /> },
+      { path: '/rede-de-especialistas/:consultorSlug/avaliar-fit', element: <ConsultantFitPage /> },
+
+      // Legacy consultant paths (redirect)
       { path: '/consultores/:consultorSlug', element: <ConsultantProfilePage /> },
       { path: '/consultores/:consultorSlug/avaliar-fit', element: <ConsultantFitPage /> },
 
-      { path: '/provedores', element: <ProvidersLandingPage /> },
-      { path: '/provedores/candidatura', element: <ProviderApplicationIntroPage /> },
-      { path: '/provedores/candidatura/novo', element: <ProviderApplicationWizard /> },
-      { path: '/provedores/candidatura/:candidaturaId', element: <ProviderApplicationStatus /> },
+      // Consultant/provider application (keep for internal flow)
+      { path: '/para-consultores/candidatura', element: <ProviderApplicationIntroPage /> },
+      { path: '/para-consultores/candidatura/novo', element: <ProviderApplicationWizard /> },
+      { path: '/para-consultores/candidatura/:candidaturaId', element: <ProviderApplicationStatus /> },
+      // Legacy
+      { path: '/provedores/candidatura', element: <Navigate to="/para-consultores/candidatura" replace /> },
+      { path: '/provedores/candidatura/novo', element: <Navigate to="/para-consultores/candidatura/novo" replace /> },
     ],
   },
 
@@ -111,11 +131,8 @@ const router = createBrowserRouter([
   {
     element: <ClientLayout />,
     children: [
-      // Unprotected client routes
       { path: '/cliente/login', element: <ClientLoginPage /> },
       { path: '/cliente/cadastro', element: <ClientSignupPage /> },
-
-      // Protected client routes
       {
         path: '/cliente/dashboard',
         element: <RequireClient><ClientDashboardPage /></RequireClient>,
@@ -186,10 +203,7 @@ const router = createBrowserRouter([
   {
     element: <OpsLayout />,
     children: [
-      // Unprotected ops route
       { path: '/ops/login', element: <OpsLoginPage /> },
-
-      // Protected ops routes
       {
         path: '/ops/dashboard',
         element: <RequireOps><OpsDashboardPage /></RequireOps>,

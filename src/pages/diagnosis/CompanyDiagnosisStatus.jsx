@@ -7,7 +7,7 @@ const STATUS_TIMELINE = [
   { key: DEMAND_STATUS.EM_DIAGNOSTICO, label: 'Em diagnóstico', sub: '5–10 dias úteis' },
   { key: DEMAND_STATUS.DIAGNOSTICADA, label: 'Diagnosticada', sub: 'Diagnóstico concluído' },
   { key: DEMAND_STATUS.EM_ROTEAMENTO, label: 'Em roteamento', sub: 'Identificando provedores adequados' },
-  { key: DEMAND_STATUS.EM_SELECAO, label: 'Em seleção', sub: 'Shortlist de provedores disponível' },
+  { key: DEMAND_STATUS.EM_SELECAO, label: 'Em seleção', sub: 'Lista de especialistas disponível' },
   { key: DEMAND_STATUS.EM_CONTRATACAO, label: 'Em contratação', sub: 'Proposta aprovada' },
   { key: DEMAND_STATUS.EM_EXECUCAO, label: 'Em execução', sub: 'Projeto em andamento' },
   { key: DEMAND_STATUS.ENCERRADA, label: 'Encerrada', sub: 'Projeto concluído' },

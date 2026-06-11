@@ -22,7 +22,7 @@ export default function ProviderApplicationIntroPage() {
     <>
       <section className="diag-hero">
         <div style={{ marginBottom: '12px' }}>
-          <Link to="/provedores" style={{ fontSize: '0.8125rem', color: 'var(--muted)', letterSpacing: '-0.01em' }}>
+          <Link to="/para-consultores" style={{ fontSize: '0.8125rem', color: 'var(--muted)', letterSpacing: '-0.01em' }}>
             ← Provedores
           </Link>
         </div>
@@ -107,10 +107,10 @@ export default function ProviderApplicationIntroPage() {
           </div>
 
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center', paddingTop: '48px', borderTop: '1px solid var(--line)', marginTop: '48px' }}>
-            <Link to="/provedores/candidatura/novo" className="btn btn-primary btn-lg">
+            <Link to="/para-consultores/candidatura/novo" className="btn btn-primary btn-lg">
               Iniciar candidatura
             </Link>
-            <Link to="/provedores" className="btn btn-secondary btn-lg">
+            <Link to="/para-consultores" className="btn btn-secondary btn-lg">
               Voltar
             </Link>
           </div>

@@ -43,7 +43,7 @@ function DirectoryCard({ provider }) {
             <span className={`availability-dot ${avail.cls}`} />
             <span className="availability-label">{avail.label}</span>
           </div>
-          <Link to={`/consultores/${provider.slug}`} className="btn btn-secondary btn-sm">
+          <Link to={`/rede-de-especialistas/${provider.slug}`} className="btn btn-secondary btn-sm">
             Ver perfil →
           </Link>
         </div>
@@ -84,10 +84,10 @@ export default function ConsultantsDirectoryPage() {
       <div className="directory-header">
         <div className="directory-header__inner">
           <span className="pub-eyebrow">Rede Oyê</span>
-          <h1 className="directory-title">Diretório de<br />Consultores</h1>
+          <h1 className="directory-title">Rede de<br />especialistas</h1>
           <p className="directory-lead">
-            Provedores homologados pela equipe Oyê, curados por expertise e resultados comprovados.
-            A contratação acontece após o diagnóstico e a definição de fit.
+            Consultores e especialistas avaliados pela equipe Oyê por expertise e resultados comprovados.
+            A indicação acontece após o diagnóstico — não antes.
           </p>
         </div>
       </div>
@@ -134,7 +134,7 @@ export default function ConsultantsDirectoryPage() {
 
       <div className="directory-body">
         <p style={{ fontSize: '0.8125rem', color: 'var(--muted)', marginBottom: '28px', letterSpacing: '-0.01em' }}>
-          {filtered.length} {filtered.length === 1 ? 'provedor encontrado' : 'provedores encontrados'}
+          {filtered.length} {filtered.length === 1 ? 'especialista encontrado' : 'especialistas encontrados'}
         </p>
 
         {filtered.length > 0 ? (
@@ -145,7 +145,7 @@ export default function ConsultantsDirectoryPage() {
           </div>
         ) : (
           <div className="directory-empty">
-            <p style={{ marginBottom: '16px' }}>Nenhum provedor encontrado com os filtros selecionados.</p>
+            <p style={{ marginBottom: '16px' }}>Nenhum especialista encontrado com os filtros selecionados.</p>
             <button
               className="btn btn-secondary btn-sm"
               onClick={() => { setSearch(''); setSectorFilter('Todos'); setProblemFilter('Todos'); setAvailabilityFilter('') }}
@@ -156,16 +156,16 @@ export default function ConsultantsDirectoryPage() {
         )}
 
         <div className="directory-notice" style={{ marginTop: '32px' }}>
-          O diretório mostra apenas provedores homologados pela equipe Oyê. A contratação acontece após o diagnóstico e a definição de fit entre demanda e provedor.
+          A rede mostra apenas especialistas avaliados pela equipe Oyê. A indicação acontece após o diagnóstico — nunca antes.
         </div>
 
         <div className="providers-join" style={{ marginTop: '32px' }}>
           <div className="providers-join__text">
-            <div className="providers-join__title">Você é consultor ou provedor de solução?</div>
-            <p className="providers-join__sub">Faça parte da rede Oyê e receba demandas qualificadas.</p>
+            <div className="providers-join__title">Você é consultor ou especialista?</div>
+            <p className="providers-join__sub">Faça parte da rede Oyê e receba demandas pré-diagnosticadas.</p>
           </div>
-          <Link to="/provedores" className="btn btn-primary">
-            Saiba como entrar →
+          <Link to="/para-consultores" className="btn btn-primary">
+            Saiba como participar →
           </Link>
         </div>
       </div>

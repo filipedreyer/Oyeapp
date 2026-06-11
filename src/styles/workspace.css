@@ -38,20 +38,14 @@
 }
 
 .workspace-sidebar__logo {
-  font-size: var(--text-xl);
-  font-weight: 900;
-  letter-spacing: var(--tracking-tighter);
-  color: var(--ink);
   text-decoration: none;
   display: block;
-}
-
-.workspace-sidebar--dark .workspace-sidebar__logo {
-  color: var(--white);
+  line-height: 1;
 }
 
 .workspace-sidebar__logo:hover {
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .workspace-sidebar__zone-label {

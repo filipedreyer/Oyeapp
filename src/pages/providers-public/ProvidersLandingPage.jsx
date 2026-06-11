@@ -60,10 +60,10 @@ export default function ProvidersLandingPage() {
           Conecte-se com empresas que já têm seus problemas diagnosticados e estão prontas para contratar. Sem cold calling, sem leads genéricos.
         </p>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          <Link to="/provedores/candidatura/novo" className="btn btn-primary btn-lg">
+          <Link to="/para-consultores/candidatura/novo" className="btn btn-primary btn-lg">
             Iniciar candidatura
           </Link>
-          <Link to="/provedores/candidatura" className="btn btn-secondary btn-lg" style={{ borderColor: 'rgba(255,255,255,0.20)', color: 'var(--white)' }}>
+          <Link to="/para-consultores/candidatura" className="btn btn-secondary btn-lg" style={{ borderColor: 'rgba(255,255,255,0.20)', color: 'var(--white)' }}>
             Saiba mais sobre o processo
           </Link>
         </div>
@@ -132,7 +132,7 @@ export default function ProvidersLandingPage() {
       <div className="final-cta">
         <h2 className="final-cta__headline">Pronto para começar?</h2>
         <p className="final-cta__sub">O formulário leva cerca de 20 minutos. Você pode salvar e retomar depois.</p>
-        <Link to="/provedores/candidatura/novo" className="btn btn-white btn-xl">
+        <Link to="/para-consultores/candidatura/novo" className="btn btn-white btn-xl">
           Iniciar candidatura
         </Link>
         <Link to="/contato" className="final-cta__link">Tenho dúvidas — falar com a equipe</Link>

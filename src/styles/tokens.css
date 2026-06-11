@@ -4,27 +4,44 @@
   --ink:          #111111;
   --ink-soft:     #2d2d2d;
   --muted:        #6d6d6d;
-  --muted-2:      #8a8781;
-  --paper:        #f4f1ec;
-  --paper-2:      #fbfaf7;
+  --muted-2:      #9a9a9a;
+  --paper:        #f7f7f5;
+  --paper-2:      #fafaf9;
   --white:        #ffffff;
-  --line:         rgba(17, 17, 17, 0.10);
-  --line-strong:  rgba(17, 17, 17, 0.20);
-  --sand:         #eee8df;
+  --line:         rgba(17, 17, 17, 0.09);
+  --line-strong:  rgba(17, 17, 17, 0.18);
+  --sand:         #eeede9;
+
+  /* Brand blues (primary institutional palette) */
+  --navy:         #14324A;
+  --navy-mid:     #1F5C88;
+  --navy-strong:  #0d2035;
+  --blue-light:   #e8f1f8;
+  --blue-mid:     #c2d9ec;
+
+  /* Brand greens (functional / positive signals) */
+  --green:        #2F6F5E;
+  --green-light:  #e6f2ef;
+  --green-mid:    #9ecfc4;
+
+  /* Neutrals */
+  --slate:        #65716F;
+  --slate-light:  #edf0ef;
+
+  /* Copper kept only for impact/accent moments — not recurring */
   --copper:       #c7772c;
   --copper-soft:  #f4e7d9;
-  --navy:         #122f45;
-  --navy-strong:  #0b1a2b;
-  --blue-grey:    #4e6474;
-  --signal:       #98764a;
-  --positive:     #314f47;
+
+  /* Functional */
+  --positive:     #2F6F5E;
   --attention:    #8f5d38;
+  --signal:       #5e7a8a;
 
   --shadow:        0 18px 50px rgba(17, 17, 17, 0.08);
   --shadow-strong: 0 24px 70px rgba(17, 17, 17, 0.14);
 
   /* ── Font stack ── */
-  --font-sans: 'Inter', 'Aptos', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Aptos Display', 'Aptos', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'Cascadia Code', 'Fira Mono', 'Consolas', monospace;
 
   /* ── Fixed scale (workspace / forms) ── */

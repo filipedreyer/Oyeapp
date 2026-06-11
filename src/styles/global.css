@@ -16,10 +16,25 @@ body {
   font-size: var(--text-base);
   line-height: var(--lh-body);
   color: var(--ink);
-  background-color: var(--paper);
+  background-color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: var(--ls-body);
+}
+
+/* ── Focus visible ── */
+:focus-visible {
+  outline: 2px solid var(--navy-mid);
+  outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--navy-mid);
+  outline-offset: 3px;
 }
 
 img, video, svg { display: block; max-width: 100%; }
@@ -111,13 +126,13 @@ p { line-height: var(--lh-body); }
 .btn:hover { text-decoration: none; }
 
 .btn-primary {
-  background-color: var(--ink);
+  background-color: var(--navy);
   color: var(--white);
-  border-color: var(--ink);
+  border-color: var(--navy);
 }
 .btn-primary:hover {
-  background-color: var(--black);
-  border-color: var(--black);
+  background-color: var(--navy-strong);
+  border-color: var(--navy-strong);
   color: var(--white);
 }
 
@@ -161,6 +176,17 @@ p { line-height: var(--lh-body); }
 .btn-copper:hover {
   background-color: var(--attention);
   border-color: var(--attention);
+  color: var(--white);
+}
+
+.btn-navy {
+  background-color: var(--navy-mid);
+  color: var(--white);
+  border-color: var(--navy-mid);
+}
+.btn-navy:hover {
+  background-color: var(--navy);
+  border-color: var(--navy);
   color: var(--white);
 }
 

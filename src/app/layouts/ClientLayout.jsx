@@ -1,4 +1,5 @@
 import { Link, NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom'
+import { LogoWordmark } from '../../components/LogoOye.jsx'
 
 function getPageTitle(pathname) {
   const titles = {
@@ -36,7 +37,7 @@ export default function ClientLayout() {
     <div className="workspace-layout">
       <aside className="workspace-sidebar">
         <div className="workspace-sidebar__header">
-          <Link to="/" className="workspace-sidebar__logo">Oyê</Link>
+          <Link to="/" className="workspace-sidebar__logo"><LogoWordmark dark size="sm" /></Link>
           <span className="workspace-sidebar__zone-label">Área do Cliente</span>
         </div>
 

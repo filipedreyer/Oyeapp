@@ -17,14 +17,14 @@ export default function ConsultantProfilePage() {
       <div className="profile-page">
         <div className="profile-header">
           <div className="profile-header__breadcrumb">
-            <Link to="/consultores">← Diretório de consultores</Link>
+            <Link to="/rede-de-especialistas">← Rede de especialistas</Link>
           </div>
           <h1 className="profile-header__name">Consultor não encontrado</h1>
           <p style={{ marginTop: '16px', color: 'var(--muted)' }}>
             Não encontramos um perfil com o identificador <strong>{consultorSlug}</strong>.
           </p>
           <div style={{ marginTop: '32px' }}>
-            <Link to="/consultores" className="btn btn-secondary">← Voltar ao diretório</Link>
+            <Link to="/rede-de-especialistas" className="btn btn-secondary">← Rede de especialistas</Link>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default function ConsultantProfilePage() {
     <div className="profile-page">
       <div className="profile-header">
         <div className="profile-header__breadcrumb">
-          <Link to="/consultores">Consultores</Link>
+          <Link to="/rede-de-especialistas">Rede de especialistas</Link>
           {' › '}
           <span>{provider.name}</span>
         </div>
@@ -143,7 +143,7 @@ export default function ConsultantProfilePage() {
               O match depende do seu problema diagnosticado, não apenas da especialidade declarada.
             </p>
             <Link
-              to={`/consultores/${provider.slug}/avaliar-fit`}
+              to={`/rede-de-especialistas/${provider.slug}/avaliar-fit`}
               className="btn btn-primary"
               style={{ width: '100%', textAlign: 'center', display: 'block' }}
             >

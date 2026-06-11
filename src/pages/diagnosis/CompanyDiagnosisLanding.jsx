@@ -18,12 +18,12 @@ const AFTER = [
   {
     n: '02',
     title: 'Diagnóstico estruturado',
-    text: 'Você recebe um relatório por email com o problema mapeado nas 6 dimensões e a rota recomendada.',
+    text: 'Você recebe o diagnóstico do seu problema com definição precisa, contexto e rota recomendada.',
   },
   {
     n: '03',
-    title: 'Shortlist de provedores',
-    text: 'Se aplicável, uma shortlist curada de consultores ou empresas da rede homologada é apresentada.',
+    title: 'Lista de especialistas com fit',
+    text: 'Se aplicável, uma seleção de consultores e especialistas da rede Oyê avaliados para o seu caso.',
   },
 ]
 

@@ -4,7 +4,7 @@ const TIMELINE = [
   { n: '01', title: 'Intake', text: 'Formulário estruturado — ~15 min' },
   { n: '02', title: 'Triagem', text: '2–3 dias úteis com a equipe Oyê' },
   { n: '03', title: 'Diagnóstico', text: 'Relatório entregue por email' },
-  { n: '04', title: 'Rota', text: 'Shortlist de provedores ou rota alternativa' },
+  { n: '04', title: 'Rota', text: 'Indicação de especialistas com fit ou rota alternativa' },
   { n: '05', title: 'Solução', text: 'Início do projeto com acompanhamento Oyê' },
 ]
 
