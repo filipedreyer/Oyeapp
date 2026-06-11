@@ -1,116 +1,142 @@
 import { Link } from 'react-router-dom'
 
-const TIMELINE = [
-  { n: '01', title: 'Formulário', text: 'Preenchimento estruturado — ~15 min' },
-  { n: '02', title: 'Triagem', text: '2–3 dias úteis com a equipe Oyê' },
-  { n: '03', title: 'Diagnóstico', text: 'Relatório entregue por email' },
-  { n: '04', title: 'Rota', text: 'Indicação de especialistas com fit ou rota alternativa' },
-  { n: '05', title: 'Solução', text: 'Início do projeto com acompanhamento Oyê' },
+const STEPS = [
+  { n: '01', title: 'Sobre a empresa', text: 'Porte, setor, momento atual' },
+  { n: '02', title: 'Quem está conduzindo', text: 'Perfil e responsabilidade sobre o problema' },
+  { n: '03', title: 'Qual é o problema', text: 'Descrição, sintomas, frequência' },
+  { n: '04', title: 'Qual é o impacto', text: 'Consequências e custo de não resolver' },
+  { n: '05', title: 'O que já foi tentado', text: 'Soluções anteriores e por que não funcionaram' },
+  { n: '06', title: 'Que dados ajudam a entender', text: 'Evidências e indicadores disponíveis' },
+  { n: '07', title: 'Revise o diagnóstico', text: 'Primeira organização do problema' },
+  { n: '08', title: 'Envie para análise', text: 'A equipe Oyê leva até 3 dias úteis' },
 ]
 
 const FAQ = [
   {
-    q: 'Meus dados são confidenciais?',
-    a: 'Sim. Todas as informações inseridas no diagnóstico são tratadas com sigilo absoluto. Nenhum dado é compartilhado com terceiros sem sua autorização explícita.',
+    q: 'O diagnóstico é gratuito?',
+    a: 'Sim. O diagnóstico inicial é totalmente gratuito e sem compromisso.',
   },
   {
     q: 'Preciso saber a solução antes de iniciar?',
-    a: 'Não. O diagnóstico foi desenhado para quem ainda não sabe qual é a solução — e inclusive para quem acha que sabe, mas precisa validar. Você só precisa saber que existe um problema.',
+    a: 'Não. O diagnóstico foi desenhado para quem ainda não sabe qual é a solução. Você só precisa saber que existe um problema.',
+  },
+  {
+    q: 'Sou obrigado a contratar alguém depois?',
+    a: 'Não. O diagnóstico entrega clareza sobre o problema. A contratação de um especialista é uma decisão sua.',
   },
   {
     q: 'Quanto tempo leva?',
-    a: 'O formulário de intake leva aproximadamente 15 minutos. Após o envio, a equipe Oyê realiza a triagem em até 3 dias úteis e entrega o diagnóstico por email.',
+    a: 'O formulário leva aproximadamente 15 minutos. Após o envio, a equipe Oyê realiza a triagem em até 3 dias úteis.',
   },
 ]
 
 export default function DiagnosisIntroPage() {
   return (
     <>
-      <section className="diag-hero">
-        <span className="pub-eyebrow">Diagnóstico de Empresa</span>
-        <h1 className="diag-hero__title">Antes da solução,<br />o problema.</h1>
-        <p className="diag-hero__lead">
-          O diagnóstico Oyê captura a natureza real da sua dor: frequência, impacto, histórico
-          de tentativas e contexto de mercado. Com isso, a plataforma estrutura uma rota de
-          solução precisa — não uma recomendação genérica.
-        </p>
-      </section>
+      {/* Intro — Antes de começar */}
+      <section className="pub-section pub-section--white" style={{ padding: 'clamp(64px,8vw,112px) var(--section-h)' }}>
+        <div className="container" style={{ maxWidth: 760 }}>
+          <span className="pub-eyebrow">Diagnóstico de empresa</span>
+          <h1 className="pub-headline">Antes de começar</h1>
+          <p style={{ fontSize: 'var(--t-body-lg)', color: 'var(--ink-soft)', lineHeight: 'var(--lh-lead)', letterSpacing: 'var(--ls-sub)', maxWidth: 600, margin: '0 0 40px' }}>
+            Você vai responder perguntas sobre sua empresa, o problema percebido,
+            o impacto, o que já foi tentado e os dados disponíveis. Isso ajuda a Oyê a
+            organizar o diagnóstico e indicar o melhor próximo passo.
+          </p>
 
-      <section className="pub-section pub-section--white">
-        <div className="container">
-          <span className="pub-eyebrow">Como você está chegando?</span>
-          <h2 className="pub-headline">Escolha o ponto de entrada</h2>
-          <div className="entry-cards">
-            <div className="entry-card">
-              <span className="entry-card__num">Hipótese formada</span>
-              <div className="entry-card__title">Sei que tenho um problema e tenho uma hipótese</div>
-              <p className="entry-card__text">
-                Você já identificou o sintoma e tem uma ideia do que pode estar causando. O
-                diagnóstico vai validar, refinar e estruturar esse entendimento para garantir
-                que a solução seja aplicada no lugar certo.
-              </p>
-              <Link to="/diagnostico/empresa/novo" className="entry-card__cta">
-                Iniciar →
-              </Link>
-            </div>
-            <div className="entry-card">
-              <span className="entry-card__num">Dor difusa</span>
-              <div className="entry-card__title">Tenho uma dor, mas não consigo nomeá-la</div>
-              <p className="entry-card__text">
-                Algo claramente não funciona, mas você não consegue articular o problema com
-                precisão. O diagnóstico Oyê foi desenhado exatamente para esse momento — ele
-                ajuda a transformar sintomas em problema nomeado.
-              </p>
-              <Link to="/diagnostico/empresa/novo" className="entry-card__cta">
-                Iniciar →
-              </Link>
-            </div>
-            <div className="entry-card">
-              <span className="entry-card__num">Exploração preventiva</span>
-              <div className="entry-card__title">Quero avaliar se existe um problema oculto</div>
-              <p className="entry-card__text">
-                A empresa vai bem, mas você quer garantir que não existe uma disfunção estrutural
-                se desenvolvendo. O diagnóstico identifica padrões antes que se tornem crises.
-              </p>
-              <Link to="/diagnostico/empresa/novo" className="entry-card__cta">
-                Iniciar →
-              </Link>
-            </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 0, border: '1px solid var(--line)', marginBottom: 48 }}>
+            {[
+              ['~15 min', 'Tempo estimado'],
+              ['Salva automaticamente', 'Continue depois se precisar'],
+              ['Sem compromisso', 'O diagnóstico não obriga contratação'],
+            ].map(([value, label]) => (
+              <div key={label} style={{ padding: '24px 28px', borderRight: '1px solid var(--line)' }}>
+                <div style={{ fontSize: 'var(--text-lg)', fontWeight: 700, color: 'var(--navy)', marginBottom: 4 }}>{value}</div>
+                <div style={{ fontSize: 'var(--text-xs)', color: 'var(--muted)', letterSpacing: 'var(--tracking-wide)', textTransform: 'uppercase' }}>{label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+            <Link to="/diagnostico/empresa/novo" className="btn btn-primary btn-lg">
+              Começar diagnóstico →
+            </Link>
+            <Link to="/contato" className="btn btn-ghost btn-lg">
+              Tenho dúvidas
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* Etapas do diagnóstico */}
       <section className="pub-section pub-section--paper">
         <div className="container">
-          <span className="pub-eyebrow">O que acontece depois</span>
-          <h2 className="pub-headline">Da entrada à solução</h2>
-          <div className="diag-timeline">
-            {TIMELINE.map(step => (
-              <div key={step.n} className="diag-timeline-step">
-                <div className="diag-timeline-step__num">{step.n}</div>
-                <div className="diag-timeline-step__title">{step.title}</div>
-                <div className="diag-timeline-step__text">{step.text}</div>
+          <span className="pub-eyebrow">O que acontece</span>
+          <h2 className="pub-headline">As etapas do diagnóstico</h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, border: '1px solid var(--line)', marginTop: 48 }}>
+            {STEPS.map((step, i) => (
+              <div key={step.n} style={{
+                padding: '28px 24px',
+                borderRight: i % 4 !== 3 ? '1px solid var(--line)' : 'none',
+                borderBottom: i < 4 ? '1px solid var(--line)' : 'none',
+              }}>
+                <div style={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--navy-mid)', marginBottom: 12 }}>
+                  {step.n}
+                </div>
+                <div style={{ fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--ink)', marginBottom: 6 }}>
+                  {step.title}
+                </div>
+                <div style={{ fontSize: 'var(--text-xs)', color: 'var(--muted)', lineHeight: 1.5 }}>
+                  {step.text}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* O que acontece depois */}
       <section className="pub-section pub-section--white">
-        <div className="container" style={{ maxWidth: '720px' }}>
+        <div className="container" style={{ maxWidth: 680 }}>
+          <span className="pub-eyebrow">Depois do envio</span>
+          <h2 className="pub-headline">O que você recebe</h2>
+
+          <div style={{ marginTop: 40, display: 'flex', flexDirection: 'column', gap: 0, border: '1px solid var(--line)' }}>
+            {[
+              ['Até 3 dias úteis', 'Triagem pela equipe Oyê'],
+              ['Diagnóstico por e-mail', 'Documento com o problema organizado e leitura Oyê'],
+              ['Rota recomendada', 'Tipo de solução e perfil de especialista ideal'],
+              ['Próximos passos claros', 'Lista de especialistas com fit ou orientação alternativa'],
+            ].map(([time, desc], i, arr) => (
+              <div key={time} style={{ display: 'flex', gap: 32, padding: '24px 36px', borderBottom: i < arr.length - 1 ? '1px solid var(--line)' : 'none', alignItems: 'flex-start' }}>
+                <div style={{ fontSize: 'var(--text-xs)', fontWeight: 700, color: 'var(--navy-mid)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-wide)', minWidth: 120, flexShrink: 0, paddingTop: 2 }}>
+                  {time}
+                </div>
+                <div style={{ fontSize: 'var(--t-body-lg)', color: 'var(--ink-soft)', lineHeight: 1.45 }}>
+                  {desc}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="pub-section pub-section--paper">
+        <div className="container" style={{ maxWidth: 720 }}>
           <span className="pub-eyebrow">Perguntas frequentes</span>
-          <h2 className="pub-headline">Antes de começar</h2>
-          <div style={{ marginTop: '52px', display: 'flex', flexDirection: 'column', gap: '0', border: '1px solid var(--line)' }}>
+          <h2 className="pub-headline">Dúvidas comuns</h2>
+          <div style={{ marginTop: 40, border: '1px solid var(--line)' }}>
             {FAQ.map((item, i) => (
               <div key={i} style={{
-                padding: '32px 36px',
+                padding: '28px 36px',
                 borderBottom: i < FAQ.length - 1 ? '1px solid var(--line)' : 'none',
-                backgroundColor: 'var(--white)',
               }}>
-                <div style={{ fontSize: '1rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--ink)', marginBottom: '10px' }}>
+                <div style={{ fontSize: 'var(--text-sm)', fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>
                   {item.q}
                 </div>
-                <p style={{ fontSize: '0.9375rem', color: 'var(--muted)', lineHeight: 1.6, letterSpacing: '-0.01em', margin: 0 }}>
+                <p style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)', lineHeight: 1.6, margin: 0 }}>
                   {item.a}
                 </p>
               </div>
@@ -120,12 +146,14 @@ export default function DiagnosisIntroPage() {
       </section>
 
       <div className="final-cta">
-        <h2 className="final-cta__headline">Pronto para estruturar o problema?</h2>
-        <p className="final-cta__sub">O diagnóstico é gratuito, confidencial e leva menos de 15 minutos.</p>
-        <Link to="/diagnostico/empresa/novo" className="btn btn-white btn-xl">
-          Começar diagnóstico
-        </Link>
-        <Link to="/contato" className="final-cta__link">Tenho dúvidas — falar com a equipe</Link>
+        <div className="container">
+          <h2 className="final-cta__headline">Pronto para estruturar o problema?</h2>
+          <p className="final-cta__sub">Gratuito, confidencial e leva menos de 15 minutos.</p>
+          <Link to="/diagnostico/empresa/novo" className="btn btn-white btn-xl">
+            Começar agora →
+          </Link>
+          <Link to="/contato" className="final-cta__link">Tenho dúvidas — falar com a equipe</Link>
+        </div>
       </div>
     </>
   )

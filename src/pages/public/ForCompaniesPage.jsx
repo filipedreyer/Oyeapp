@@ -1,52 +1,43 @@
 import { Link } from 'react-router-dom'
 
-const CHALLENGES = [
-  {
-    num: '01',
-    title: 'Você sente que o problema mudou no meio do caminho',
-    text: 'A consultoria começa, mas o diagnóstico que sustentava o escopo estava errado. Resultado: retrabalho, custo e frustração dos dois lados.',
-  },
-  {
-    num: '02',
-    title: 'Você contratou a solução errada para o problema certo',
-    text: 'O problema era real, mas o especialista não tinha fit com o estágio, o setor ou o momento da empresa. A entrega foi boa — mas para outro contexto.',
-  },
-  {
-    num: '03',
-    title: 'Você não sabe como avaliar propostas diferentes',
-    text: 'Três consultores, três abordagens, sem critério claro de comparação. A decisão acaba sendo por preço ou por confiança pessoal.',
-  },
+const WHEN_TO_USE = [
+  'Você sente que o problema mudou no meio do caminho',
+  'Passou por consultorias antes e não teve o resultado esperado',
+  'Tem três propostas diferentes e não sabe como comparar',
+  'Quer estruturar melhor o problema antes de contratar qualquer solução',
+  'Está em momento de transição — crescimento, reestruturação ou pivô',
+  'Precisa de um segundo olhar externo e qualificado',
 ]
 
 const DELIVERABLES = [
   {
     num: '01',
-    title: 'Diagnóstico estruturado',
-    text: 'Um documento com a definição precisa do seu problema, contexto, urgência e critérios de sucesso — elaborado com metodologia, não com achismos.',
+    title: 'Resumo diagnóstico',
+    text: 'Definição precisa do problema, contexto, urgência e critérios de sucesso — em documento elaborado pela equipe Oyê.',
   },
   {
     num: '02',
     title: 'Rota recomendada',
-    text: 'Uma indicação da abordagem mais adequada para o seu caso — tipo de especialista, perfil de entrega e estimativa de prazo.',
+    text: 'Indicação da abordagem mais adequada: tipo de especialista, perfil de entrega e estimativa de prazo.',
   },
   {
     num: '03',
-    title: 'Lista de especialistas com fit',
-    text: 'Uma seleção de consultores e especialistas da rede Oyê avaliados para o seu contexto específico, com perfis completos para análise.',
+    title: 'Especialistas indicados com fit',
+    text: 'Seleção de consultores da rede Oyê avaliados especificamente para o seu contexto, com perfis completos.',
   },
   {
     num: '04',
-    title: 'Acompanhamento da seleção',
-    text: 'Suporte no processo de análise de propostas, critérios de comparação e decisão de contratação.',
+    title: 'Apoio na decisão',
+    text: 'Critérios de comparação e suporte na análise das propostas recebidas, sem intermediação ou comissão.',
   },
 ]
 
-const WHO = [
-  'Empresas que sentem que o diagnóstico interno não é suficiente',
-  'Líderes que querem estruturar melhor o problema antes de contratar',
-  'Times que já contrataram consultoria e não tiveram o resultado esperado',
-  'Empresas em momento de transição — crescimento, reestruturação ou pivô',
-  'Organizações que precisam de um segundo olhar externo e qualificado',
+const FAQ = [
+  { q: 'O diagnóstico é gratuito?', a: 'Sim. O diagnóstico inicial é gratuito e sem compromisso.' },
+  { q: 'Sou obrigado a contratar alguém?', a: 'Não. O diagnóstico entrega clareza. A contratação é uma decisão sua.' },
+  { q: 'A Oyê executa o projeto?', a: 'Não. A Oyê organiza o diagnóstico e indica especialistas. A execução é feita por eles.' },
+  { q: 'Quanto tempo leva?', a: 'O formulário leva cerca de 15 minutos. A Oyê entrega o diagnóstico em até 3 dias úteis.' },
+  { q: 'Quem escolhe os especialistas?', a: 'A Oyê indica com base no diagnóstico. Você analisa os perfis e decide.' },
 ]
 
 export default function ForCompaniesPage() {
@@ -55,12 +46,12 @@ export default function ForCompaniesPage() {
       {/* Hero */}
       <section className="pub-section pub-section--white" style={{ padding: 'clamp(72px,9vw,128px) var(--section-h)' }}>
         <span className="pub-eyebrow">Para empresas</span>
-        <h1 className="pub-headline" style={{ maxWidth: 760 }}>
-          Antes de contratar uma solução,<br />entenda o problema.
+        <h1 className="pub-headline" style={{ maxWidth: 800 }}>
+          Você tem um problema,<br />mas ainda não sabe qual solução contratar?
         </h1>
-        <p className="pub-lead" style={{ marginBottom: 44 }}>
-          A Oyê estrutura o diagnóstico estratégico da sua empresa e indica os especialistas
-          certos — com fit real para o seu caso.
+        <p className="pub-lead" style={{ marginBottom: 44, maxWidth: 640 }}>
+          A Oyê organiza o diagnóstico antes de indicar especialistas, propostas
+          ou caminhos de execução. O problema certo primeiro. A solução depois.
         </p>
         <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
           <Link to="/diagnostico/empresa" className="btn btn-primary btn-lg">
@@ -72,84 +63,130 @@ export default function ForCompaniesPage() {
         </div>
       </section>
 
-      {/* O problema que resolvemos */}
+      {/* Quando usar a Oyê */}
       <section className="pub-section pub-section--paper">
-        <div style={{ maxWidth: 680, marginBottom: 'clamp(48px,6vw,80px)' }}>
-          <span className="pub-eyebrow">O problema</span>
-          <h2 className="pub-headline">Por que tantas contratações de consultoria não funcionam?</h2>
-        </div>
-        <div className="thesis-grid">
-          {CHALLENGES.map(c => (
-            <div key={c.num} className="thesis-item">
-              <span className="thesis-item__num">{c.num}</span>
-              <h3 className="thesis-item__title">{c.title}</h3>
-              <p className="thesis-item__text">{c.text}</p>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'start' }}>
+            <div>
+              <span className="pub-eyebrow">Quando usar</span>
+              <h2 className="pub-headline">A Oyê foi feita para quem quer decidir melhor</h2>
+              <p className="pub-lead">
+                Não importa se você tem clareza sobre o problema ou não.
+                O diagnóstico foi desenhado para os dois momentos.
+              </p>
             </div>
-          ))}
+            <div style={{ paddingTop: 8 }}>
+              {WHEN_TO_USE.map((item, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: 'flex',
+                    gap: 16,
+                    padding: '20px 0',
+                    borderBottom: '1px solid var(--line)',
+                    alignItems: 'flex-start',
+                    fontSize: 'var(--t-body-lg)',
+                    color: 'var(--ink-soft)',
+                    lineHeight: 1.45,
+                    letterSpacing: 'var(--ls-sub)',
+                  }}
+                >
+                  <span style={{ color: 'var(--navy-mid)', fontWeight: 700, flexShrink: 0 }}>—</span>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* Split photo — como o diagnóstico funciona */}
+      <div className="split-photo-section">
+        <div className="split-photo-section__content">
+          <span className="pub-eyebrow">O caminho</span>
+          <h2 style={{ fontSize: 'var(--t-headline)', fontWeight: 600, lineHeight: 'var(--lh-heading)', letterSpacing: 'var(--ls-headline)', color: 'var(--ink)', margin: 0 }}>
+            Do problema à solução certa.
+          </h2>
+          <p style={{ fontSize: 'var(--t-body-lg)', color: 'var(--muted)', lineHeight: 'var(--lh-lead)', letterSpacing: 'var(--ls-sub)', margin: 0 }}>
+            A Oyê não começa pela solução. Começa pela escuta, pelo diagnóstico e
+            pela definição do tipo de ajuda que faz sentido para o seu momento.
+            Só depois indicamos especialistas com fit real.
+          </p>
+          <div style={{ display: 'flex', gap: 0, flexDirection: 'column', borderLeft: '3px solid var(--navy-mid)', paddingLeft: 20 }}>
+            {['Problema descrito', 'Diagnóstico organizado', 'Rota definida', 'Especialistas indicados', 'Você decide'].map((step, i) => (
+              <div key={step} style={{ padding: '8px 0', fontSize: 'var(--text-sm)', color: i === 4 ? 'var(--navy-mid)' : 'var(--ink-soft)', fontWeight: i === 4 ? 700 : 400 }}>
+                {step}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="split-photo-section__image">
+          <img src="/photos/pass.jpg" alt="" aria-hidden="true" className="split-photo-section__photo" />
+        </div>
+      </div>
 
       {/* O que a Oyê entrega */}
       <section className="pub-section pub-section--white">
-        <span className="pub-eyebrow">O que você recebe</span>
-        <h2 className="pub-headline">Do diagnóstico à decisão de contratação</h2>
+        <div className="container">
+          <span className="pub-eyebrow">O que você recebe</span>
+          <h2 className="pub-headline">Do diagnóstico à decisão de contratação</h2>
 
-        <div className="method-list" style={{ marginTop: 56 }}>
-          {DELIVERABLES.map((d, i) => (
-            <div key={d.num} className="method-item">
-              <div className="method-icon" style={{ fontSize: '1rem', fontWeight: 800, letterSpacing: '-0.04em' }}>
-                {d.num}
+          <div className="method-list" style={{ marginTop: 56 }}>
+            {DELIVERABLES.map(d => (
+              <div key={d.num} className="method-item">
+                <div className="method-icon" style={{ fontSize: '1rem', fontWeight: 700, letterSpacing: '-0.04em' }}>
+                  {d.num}
+                </div>
+                <div className="method-item__body">
+                  <h3 className="method-item__title">{d.title}</h3>
+                  <p className="method-item__text">{d.text}</p>
+                </div>
               </div>
-              <div className="method-item__body">
-                <h3 className="method-item__title">{d.title}</h3>
-                <p className="method-item__text">{d.text}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Para quem é */}
-      <section className="pub-section pub-section--navy">
-        <span className="pub-eyebrow">Para quem é</span>
-        <h2 className="pub-headline">A Oyê foi feita para quem quer decidir melhor</h2>
-        <div style={{ marginTop: 48, display: 'flex', flexDirection: 'column', gap: 0 }}>
-          {WHO.map((item, i) => (
-            <div
-              key={i}
-              style={{
-                padding: '22px 0',
-                borderBottom: '1px solid rgba(255,255,255,0.12)',
-                display: 'flex',
-                alignItems: 'flex-start',
-                gap: 20,
-                color: 'rgba(255,255,255,0.82)',
-                fontSize: 'var(--t-body-lg)',
-                letterSpacing: 'var(--ls-sub)',
-                lineHeight: 1.45,
-              }}
-            >
-              <span style={{ color: 'var(--green-mid)', fontWeight: 700, flexShrink: 0 }}>—</span>
-              {item}
-            </div>
-          ))}
+      {/* FAQ */}
+      <section className="pub-section pub-section--paper">
+        <div className="container" style={{ maxWidth: 720 }}>
+          <span className="pub-eyebrow">Perguntas frequentes</span>
+          <h2 className="pub-headline">Antes de começar</h2>
+          <div style={{ marginTop: 40, border: '1px solid var(--line)' }}>
+            {FAQ.map((item, i) => (
+              <div key={i} style={{
+                padding: '28px 36px',
+                borderBottom: i < FAQ.length - 1 ? '1px solid var(--line)' : 'none',
+              }}>
+                <div style={{ fontSize: 'var(--text-sm)', fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>
+                  {item.q}
+                </div>
+                <p style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)', lineHeight: 1.6, margin: 0 }}>
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="final-cta">
-        <h2 className="final-cta__headline">
-          Pronto para estruturar<br />o problema certo?
-        </h2>
-        <p className="final-cta__sub">
-          O diagnóstico leva menos de 15 minutos. A clareza que ele traz dura muito mais.
-        </p>
-        <Link to="/diagnostico/empresa" className="btn btn-white btn-xl">
-          Iniciar diagnóstico gratuito
-        </Link>
-        <Link to="/como-funciona" className="final-cta__link">
-          Ver como funciona →
-        </Link>
+        <div className="container">
+          <h2 className="final-cta__headline">
+            Comece pelo diagnóstico.
+          </h2>
+          <p className="final-cta__sub">
+            Gratuito, confidencial e leva menos de 15 minutos.
+            A clareza que ele traz dura muito mais.
+          </p>
+          <Link to="/diagnostico/empresa" className="btn btn-white btn-xl">
+            Iniciar diagnóstico →
+          </Link>
+          <Link to="/como-funciona" className="final-cta__link">
+            Ver como funciona →
+          </Link>
+        </div>
       </section>
     </>
   )

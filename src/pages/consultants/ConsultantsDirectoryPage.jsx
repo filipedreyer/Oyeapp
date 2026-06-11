@@ -87,8 +87,28 @@ export default function ConsultantsDirectoryPage() {
           <h1 className="directory-title">Rede de<br />especialistas</h1>
           <p className="directory-lead">
             Consultores e especialistas avaliados pela equipe Oyê por expertise e resultados comprovados.
-            A indicação acontece após o diagnóstico — não antes.
+            Esta não é uma contratação direta por catálogo — a recomendação certa depende do diagnóstico.
           </p>
+        </div>
+      </div>
+
+      {/* Mapa de cobertura por área */}
+      <div style={{ padding: '0 var(--section-h)', borderBottom: '1px solid var(--line)' }}>
+        <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '40px 0' }}>
+          <p style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--navy-mid)', marginBottom: 16 }}>
+            Áreas de cobertura
+          </p>
+          <div className="area-grid">
+            {['Estratégia', 'Operações', 'Finanças', 'Pessoas', 'Jurídico', 'Tecnologia', 'Marketing', 'Dados'].map(area => (
+              <button
+                key={area}
+                className="area-grid__item"
+                onClick={() => { setProblemFilter(area !== 'Dados' && area !== 'Jurídico' && area !== 'Finanças' && area !== 'Pessoas' ? area : 'Todos') }}
+              >
+                {area}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

@@ -234,6 +234,35 @@
   border-top: var(--border);
 }
 
+/* ── Auth shell wrapper (no sidebar) ── */
+.auth-shell {
+  min-height: 100vh;
+  background-color: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-4);
+  position: relative;
+}
+
+.auth-shell__back {
+  position: absolute;
+  top: var(--space-6);
+  left: var(--space-6);
+}
+
+.auth-shell__back-link {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: var(--tracking-wide);
+}
+
+.auth-shell__back-link:hover {
+  color: var(--ink);
+}
+
 /* ── Login / Auth forms ── */
 .auth-layout {
   min-height: 100vh;

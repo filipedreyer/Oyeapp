@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom'
 
 // Layouts
 import PublicLayout from './layouts/PublicLayout.jsx'
+import AuthLayout from './layouts/AuthLayout.jsx'
 import ClientLayout from './layouts/ClientLayout.jsx'
 import ProviderLayout from './layouts/ProviderLayout.jsx'
 import OpsLayout from './layouts/OpsLayout.jsx'
@@ -127,12 +128,20 @@ const router = createBrowserRouter([
     ],
   },
 
+  // ── AUTH (login pages — no sidebar) ──────────────────────────────────────
+  {
+    element: <AuthLayout />,
+    children: [
+      { path: '/cliente/login', element: <ClientLoginPage /> },
+      { path: '/cliente/cadastro', element: <ClientSignupPage /> },
+      { path: '/ops/login', element: <OpsLoginPage /> },
+    ],
+  },
+
   // ── CLIENTE ─────────────────────────────────────────────────────────────
   {
     element: <ClientLayout />,
     children: [
-      { path: '/cliente/login', element: <ClientLoginPage /> },
-      { path: '/cliente/cadastro', element: <ClientSignupPage /> },
       {
         path: '/cliente/dashboard',
         element: <RequireClient><ClientDashboardPage /></RequireClient>,
@@ -203,7 +212,6 @@ const router = createBrowserRouter([
   {
     element: <OpsLayout />,
     children: [
-      { path: '/ops/login', element: <OpsLoginPage /> },
       {
         path: '/ops/dashboard',
         element: <RequireOps><OpsDashboardPage /></RequireOps>,

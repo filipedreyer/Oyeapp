@@ -1804,3 +1804,342 @@
   text-align: center;
   justify-content: center;
 }
+
+/* ══════════════════════════════════════════
+   HERO SPLIT LAYOUT (home)
+   ══════════════════════════════════════════ */
+.hero--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  min-height: calc(100svh - var(--header-height));
+  padding: 0;
+}
+
+.hero--split::before,
+.hero--split::after {
+  display: none;
+}
+
+.hero--split__text {
+  padding: clamp(56px, 8vw, 112px) var(--section-h) clamp(56px, 8vw, 112px) var(--section-h);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hero--split__image {
+  position: relative;
+  align-self: stretch;
+  overflow: hidden;
+  background-color: var(--slate);
+}
+
+.hero--split__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  filter: grayscale(100%) contrast(1.08);
+}
+
+.hero-secondary-link {
+  margin-top: 20px;
+}
+
+.hero-secondary-link a {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  letter-spacing: var(--tracking-wide);
+  text-decoration: none;
+}
+
+.hero-secondary-link a:hover {
+  color: var(--navy-mid);
+}
+
+/* ══════════════════════════════════════════
+   HOME STEPS GRID
+   ══════════════════════════════════════════ */
+.home-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  margin-top: 56px;
+}
+
+.home-step {
+  padding: clamp(28px, 4vw, 44px);
+  border-right: 1px solid var(--line);
+}
+
+.home-step:last-child {
+  border-right: none;
+}
+
+.home-step__num {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--navy-mid);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.home-step__title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.home-step__text {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════
+   AUDIENCE CARDS
+   ══════════════════════════════════════════ */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  margin-top: 48px;
+}
+
+.audience-card {
+  padding: clamp(32px, 4vw, 56px);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.audience-card:last-child {
+  border-right: none;
+}
+
+.audience-card--muted {
+  background-color: var(--paper);
+}
+
+.audience-card__label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy-mid);
+  display: block;
+}
+
+.audience-card__text {
+  font-size: var(--t-body-lg);
+  color: var(--ink-soft);
+  line-height: 1.5;
+  flex: 1;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════
+   EXAMPLE JOURNEY
+   ══════════════════════════════════════════ */
+.example-journey {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+  margin-top: 56px;
+  max-width: 760px;
+}
+
+.example-journey__step {
+  padding: 32px 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.example-journey__step--highlight {
+  background-color: var(--blue-light);
+  border-bottom: none;
+}
+
+.example-journey__label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy-mid);
+  margin-bottom: 10px;
+}
+
+.example-journey__text {
+  font-size: var(--t-body-lg);
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.example-journey__arrow {
+  padding: 12px 40px;
+  font-size: 1.25rem;
+  color: var(--muted-2);
+  border-bottom: 1px solid var(--line);
+  border-left: none;
+}
+
+/* ══════════════════════════════════════════
+   DELIVERABLES LIST
+   ══════════════════════════════════════════ */
+.deliverables-list {
+  list-style: none;
+  margin: 48px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.deliverables-list__item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 22px 28px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: var(--t-body-lg);
+  color: rgba(255,255,255,0.82);
+  letter-spacing: var(--ls-sub);
+}
+
+.deliverables-list__check {
+  color: var(--green-mid);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ══════════════════════════════════════════
+   AREA GRID (specialist network)
+   ══════════════════════════════════════════ */
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  margin-top: 48px;
+}
+
+.area-grid__item {
+  padding: 28px 24px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  color: var(--ink);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 160ms, color 160ms;
+  background: none;
+  border-top: none;
+  border-left: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.area-grid__item:hover {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.home-network-ctas {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+/* ══════════════════════════════════════════
+   SPLIT PHOTO SECTION (Para empresas)
+   ══════════════════════════════════════════ */
+.split-photo-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.split-photo-section__content {
+  padding: clamp(48px, 7vw, 96px) var(--section-h);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.split-photo-section__image {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  background-color: var(--slate);
+}
+
+.split-photo-section__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) contrast(1.08);
+}
+
+.split-photo-section--reverse .split-photo-section__image {
+  order: -1;
+}
+
+/* ══════════════════════════════════════════
+   INTELLIGENCE HERO (grid.jpg split)
+   ══════════════════════════════════════════ */
+.intel-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  border-bottom: 1px solid var(--line);
+  min-height: 480px;
+}
+
+.intel-hero__image {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--navy-strong);
+}
+
+.intel-hero__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) contrast(1.12);
+  opacity: 0.72;
+}
+
+.intel-hero__content {
+  padding: clamp(56px, 8vw, 112px) var(--section-h);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  background-color: var(--white);
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { LogoWordmark } from '../../components/LogoOye.jsx'
 
 export default function ClientLoginPage() {
   const navigate = useNavigate()
@@ -27,7 +28,7 @@ export default function ClientLoginPage() {
   return (
     <div className="auth-layout">
       <div className="auth-panel">
-        <Link to="/" className="auth-panel__logo">Oyê</Link>
+        <Link to="/" className="auth-panel__logo"><LogoWordmark dark size="sm" /></Link>
 
         <h1 className="auth-panel__title">Entrar</h1>
         <p className="auth-panel__subtitle">Acesse a sua área de cliente.</p>
@@ -78,8 +79,8 @@ export default function ClientLoginPage() {
         </div>
 
         <div className="auth-panel__footer">
-          É provedor?{' '}
-          <Link to="/provedores/candidatura">Acesse por aqui</Link>
+          É consultor?{' '}
+          <Link to="/para-consultores/candidatura">Faça sua candidatura</Link>
         </div>
       </div>
     </div>

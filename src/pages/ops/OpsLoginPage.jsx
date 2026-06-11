@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { LogoWordmark } from '../../components/LogoOye.jsx'
 
 export default function OpsLoginPage() {
   const navigate = useNavigate()
@@ -23,7 +24,7 @@ export default function OpsLoginPage() {
   return (
     <div className="auth-layout">
       <div className="auth-panel">
-        <Link to="/" className="auth-panel__logo">Oyê</Link>
+        <Link to="/" className="auth-panel__logo"><LogoWordmark dark size="sm" /></Link>
 
         <h1 className="auth-panel__title">Operações</h1>
         <p className="auth-panel__subtitle">Acesso restrito à equipe Oyê.</p>

@@ -240,7 +240,7 @@ p { line-height: var(--lh-body); }
   font-size: var(--text-sm);
   line-height: var(--lh-body);
 }
-.alert-info    { border-left-color: var(--blue-grey); background-color: rgba(78,100,116,0.06); }
+.alert-info    { border-left-color: var(--navy-mid); background-color: var(--blue-light); }
 .alert-warning { border-left-color: var(--attention); background-color: rgba(143,93,56,0.06); }
 .alert-success { border-left-color: var(--positive);  background-color: rgba(49,79,71,0.06); }
 
