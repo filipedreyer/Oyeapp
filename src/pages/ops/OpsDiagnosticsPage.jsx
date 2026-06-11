@@ -15,7 +15,7 @@ const STATUS_LABELS = {
 }
 
 const STATUS_BADGE = {
-  em_analise: 'badge badge-copper',
+  em_analise: 'badge badge-navy',
   aguardando_dados: 'badge badge-attention',
   aprovado: 'badge badge-positive',
   pendente: 'badge',

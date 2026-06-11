@@ -38,7 +38,7 @@ const STATUS_LABELS = {
 }
 
 const STATUS_BADGE = {
-  em_analise: 'badge badge-copper',
+  em_analise: 'badge badge-navy',
   aguardando_dados: 'badge badge-attention',
   aprovado: 'badge badge-positive',
   pendente: 'badge',
@@ -49,7 +49,7 @@ const STATUS_BADGE = {
 function getScoreInterpretation(total) {
   if (total <= 12) return { label: 'Problema simples / solução direta', badge: 'badge badge-positive' }
   if (total <= 20) return { label: 'Problema moderado / diagnóstico recomendado', badge: 'badge badge-attention' }
-  return { label: 'Problema complexo / diagnóstico profundo necessário', badge: 'badge badge-copper' }
+  return { label: 'Problema complexo / diagnóstico profundo necessário', badge: 'badge badge-navy' }
 }
 
 const DEFAULT_STATE = {
@@ -149,7 +149,7 @@ export default function OpsDiagnosticWorkbenchPage() {
                   <p style={{ fontSize: 'var(--text-sm)', color: 'var(--ink-soft)', lineHeight: '1.7' }}>{demand.description}</p>
                   <div style={{ marginTop: 'var(--space-3)', display: 'flex', gap: 'var(--space-2)', flexWrap: 'wrap' }}>
                     {demand.problemTypes.map((pt) => (
-                      <span key={pt} className="badge badge-copper">{pt}</span>
+                      <span key={pt} className="badge badge-navy">{pt}</span>
                     ))}
                   </div>
                 </div>

@@ -18,8 +18,8 @@ const STATUS_BADGE_MAP = {
   rascunho: 'badge',
   enviada: 'badge badge-attention',
   qualificada: 'badge badge-positive',
-  em_diagnostico: 'badge badge-copper',
-  em_roteamento: 'badge badge-copper',
+  em_diagnostico: 'badge badge-navy',
+  em_roteamento: 'badge badge-navy',
   em_execucao: 'badge badge-positive',
   diagnosticada: 'badge badge-positive',
   aguardando_complemento: 'badge badge-attention',
@@ -57,7 +57,7 @@ export default function OpsDashboardPage() {
         </div>
         <div className="ops-metric-card">
           <div className="ops-metric-card__value">{providersInHomologation.length}</div>
-          <div className="ops-metric-card__label">Provedores em homologação</div>
+          <div className="ops-metric-card__label">Especialistas em avaliação</div>
         </div>
         <div className="ops-metric-card">
           <div className="ops-metric-card__value">2</div>
@@ -103,7 +103,7 @@ export default function OpsDashboardPage() {
                 <div className="ops-col-item__main">
                   <div className="ops-col-item__title">{d.empresa}</div>
                   <div className="ops-col-item__sub">
-                    <span className="badge badge-copper" style={{ marginRight: '6px' }}>
+                    <span className="badge badge-navy" style={{ marginRight: '6px' }}>
                       {d.status === 'em_analise' ? 'Em análise' : 'Aguardando dados'}
                     </span>
                     {d.analista}
@@ -151,7 +151,7 @@ export default function OpsDashboardPage() {
               Nova demanda manual
             </Link>
             <Link to="/ops/provedores" className="btn btn-secondary">
-              Ver base de provedores
+              Ver base de especialistas
             </Link>
             <Link to="/ops/inteligencia" className="btn btn-secondary">
               Painel de inteligência

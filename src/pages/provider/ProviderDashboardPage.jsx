@@ -31,18 +31,18 @@ export default function ProviderDashboardPage() {
   }
 
   const HOMOLOG_LABELS = {
-    aprovado: 'Homologado',
-    em_homologacao: 'Em homologação',
+    aprovado: 'Avaliado pela Oyê',
+    em_homologacao: 'Em avaliação',
     em_analise: 'Em análise',
-    reprovado: 'Reprovado',
+    reprovado: 'Não aprovado',
   }
 
   return (
     <div className="workspace-content">
       <div className="ws-page-header">
-        <p className="eyebrow">Área do provedor</p>
+        <p className="eyebrow">Área do especialista</p>
         <h1>Bem-vindo(a), {name}</h1>
-        <p>Gerencie sua presença na plataforma Oyê.</p>
+        <p>Gerencie seu perfil e oportunidades..</p>
       </div>
 
       {/* Homologation status card */}
@@ -61,13 +61,13 @@ export default function ProviderDashboardPage() {
         }}
       >
         <div>
-          <p className="eyebrow" style={{ marginBottom: 'var(--space-2)' }}>Status de homologação</p>
+          <p className="eyebrow" style={{ marginBottom: 'var(--space-2)' }}>Status na rede Oyê</p>
           <span className={HOMOLOG_BADGE[homologStatus] || 'badge'}>
             {HOMOLOG_LABELS[homologStatus] || homologStatus}
           </span>
         </div>
         <Link to="/provedor/homologacao" className="btn btn-secondary" style={{ fontSize: 'var(--text-sm)' }}>
-          Ver detalhes da homologação
+          Ver detalhes da avaliação
         </Link>
       </div>
 
@@ -84,10 +84,10 @@ export default function ProviderDashboardPage() {
           }}
         >
           <p style={{ fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--ink)', marginBottom: 'var(--space-2)' }}>
-            Candidatura em análise
+            Candidatura em avaliação
           </p>
           <p style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)', lineHeight: '1.7' }}>
-            Sua candidatura está em análise. A equipe Oyê entrará em contato em até 5 dias úteis para dar continuidade ao processo de homologação.
+            Sua candidatura está em análise. A equipe Oyê entrará em contato em até 5 dias úteis para dar continuidade ao processo de avaliação.
           </p>
         </div>
       )}
@@ -111,7 +111,7 @@ export default function ProviderDashboardPage() {
       {/* Navigation */}
       <div className="section-card">
         <div className="section-card__header">
-          <h3 className="section-card__title">Área do provedor</h3>
+          <h3 className="section-card__title">Área do especialista</h3>
         </div>
         <div className="section-card__body">
           <div className="ops-quick-actions">

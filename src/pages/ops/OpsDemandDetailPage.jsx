@@ -20,11 +20,11 @@ const STATUS_BADGE = {
   enviada: 'badge badge-attention',
   aguardando_complemento: 'badge badge-attention',
   qualificada: 'badge badge-positive',
-  em_diagnostico: 'badge badge-copper',
+  em_diagnostico: 'badge badge-navy',
   diagnosticada: 'badge badge-positive',
-  em_roteamento: 'badge badge-copper',
-  em_selecao: 'badge badge-copper',
-  em_contratacao: 'badge badge-copper',
+  em_roteamento: 'badge badge-navy',
+  em_selecao: 'badge badge-navy',
+  em_contratacao: 'badge badge-navy',
   em_execucao: 'badge badge-positive',
   encerrada: 'badge',
   cancelada: 'badge',
@@ -154,7 +154,7 @@ export default function OpsDemandDetailPage() {
                 <p className="eyebrow" style={{ marginBottom: 'var(--space-2)' }}>Tipos de problema</p>
                 <div style={{ display: 'flex', gap: 'var(--space-2)', flexWrap: 'wrap' }}>
                   {demand.problemTypes.map((pt) => (
-                    <span key={pt} className="badge badge-copper">{pt}</span>
+                    <span key={pt} className="badge badge-navy">{pt}</span>
                   ))}
                 </div>
               </div>

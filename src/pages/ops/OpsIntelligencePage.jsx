@@ -1,7 +1,7 @@
 import { mockIntelligence } from '../../data/mockIntelligence'
 
 const SEVERITY_BADGE = {
-  critica: 'badge badge-copper',
+  critica: 'badge badge-navy',
   alta: 'badge badge-attention',
   media: 'badge badge-positive',
   baixa: 'badge',
@@ -70,7 +70,7 @@ export default function OpsIntelligencePage() {
               </div>
               <div style={{ marginTop: 'var(--space-3)', display: 'flex', flexWrap: 'wrap', gap: 'var(--space-1)' }}>
                 {c.problemTypes.map((pt) => (
-                  <span key={pt} className="badge badge-copper" style={{ fontSize: '10px' }}>{pt}</span>
+                  <span key={pt} className="badge badge-navy" style={{ fontSize: '10px' }}>{pt}</span>
                 ))}
               </div>
               <button
@@ -151,7 +151,7 @@ export default function OpsIntelligencePage() {
           ].map((s) => (
             <div key={s.id} className="intel-card">
               <div className="intel-card__header">
-                <span className="badge badge-copper">Sinal</span>
+                <span className="badge badge-navy">Sinal</span>
                 <div className="intel-card__freq">{s.freq} ocorrências</div>
               </div>
               <div className="intel-card__desc" style={{ marginTop: 'var(--space-2)' }}>{s.desc}</div>

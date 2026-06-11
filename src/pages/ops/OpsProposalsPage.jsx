@@ -17,7 +17,7 @@ const STATUS_LABELS = {
 
 const STATUS_BADGE = {
   enviada: 'badge badge-attention',
-  em_negociacao: 'badge badge-copper',
+  em_negociacao: 'badge badge-navy',
   aprovada: 'badge badge-positive',
   recusada: 'badge',
   cancelada: 'badge',

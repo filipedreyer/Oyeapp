@@ -27,7 +27,7 @@ const PROCESS = [
   {
     num: '02',
     title: 'Análise',
-    text: 'A equipe Oyê avalia sua candidatura e verifica o alinhamento com o perfil de provedores da rede.',
+    text: 'A equipe Oyê avalia sua candidatura e verifica o alinhamento com o perfil de especialistas da rede.',
   },
   {
     num: '03',
@@ -36,8 +36,8 @@ const PROCESS = [
   },
   {
     num: '04',
-    title: 'Homologação',
-    text: 'Aprovado, você passa a integrar a rede e começa a receber demandas qualificadas.',
+    title: 'Avaliação',
+    text: 'Aprovado, você passa a integrar a rede avaliada e receber demandas pré-diagnosticadas.',
   },
 ]
 

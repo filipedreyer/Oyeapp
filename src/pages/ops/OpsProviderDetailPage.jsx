@@ -107,7 +107,7 @@ export default function OpsProviderDetailPage() {
                 <div>
                   <p className="eyebrow" style={{ marginBottom: 'var(--space-2)' }}>Especialidades</p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-1)' }}>
-                    {provider.specialties.map((s) => <span key={s} className="badge badge-copper">{s}</span>)}
+                    {provider.specialties.map((s) => <span key={s} className="badge badge-navy">{s}</span>)}
                   </div>
                 </div>
                 <div>

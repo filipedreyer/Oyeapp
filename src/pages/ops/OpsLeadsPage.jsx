@@ -17,7 +17,7 @@ const LEAD_STATUS_LABELS = {
 
 const LEAD_STATUS_BADGE = {
   novo: 'badge badge-attention',
-  em_contato: 'badge badge-copper',
+  em_contato: 'badge badge-navy',
   qualificado: 'badge badge-positive',
   descartado: 'badge',
   convertido_em_cliente: 'badge badge-positive',
